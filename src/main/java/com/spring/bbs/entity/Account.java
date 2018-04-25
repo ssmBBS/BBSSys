@@ -23,6 +23,8 @@ public class Account {
     private String email;
     /**账户的权限*/
     private Integer rights;
+    /* 用户验证码*/
+
     public Account(){
 
     }
