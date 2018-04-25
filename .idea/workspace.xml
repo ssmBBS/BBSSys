@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f905499b-f085-4607-b855-bec6b065fcb5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/BBS_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/BBS_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BBS.iml" afterPath="$PROJECT_DIR$/BBS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/spring/bbs/entity/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/spring/bbs/entity/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/AccountServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="792">
@@ -69,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/AccountServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1015">
@@ -123,7 +126,7 @@
                 <element signature="e#1856#1857#0" expanded="false" />
                 <element signature="e#1904#1905#0" expanded="false" />
                 <element signature="e#1944#1945#0" expanded="false" />
-                <marker date="1524655968002" expanded="true" signature="560:568" ph="{...}" />
+                <marker date="1524655993877" expanded="true" signature="560:568" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -717,9 +720,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/BBS.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/spring/bbs/entity/Account.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/spring/bbs/dao/DiscussDao.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/mapper/DiscussMapper.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -1221,7 +1223,7 @@
       <workItem from="1524578704281" duration="1240000" />
       <workItem from="1524581998607" duration="4278000" />
       <workItem from="1524647290199" duration="4497000" />
-      <workItem from="1524653026847" duration="2742000" />
+      <workItem from="1524653026847" duration="2784000" />
     </task>
     <task id="LOCAL-00001" summary="idea commit">
       <created>1524545740145</created>
@@ -1321,11 +1323,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524654985642</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="commit all">
+      <created>1524655973713</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1524655973713</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21138000" />
+    <option name="totallyTimeSpent" value="21180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1849,7 +1858,7 @@
             <element signature="e#1856#1857#0" expanded="false" />
             <element signature="e#1904#1905#0" expanded="false" />
             <element signature="e#1944#1945#0" expanded="false" />
-            <marker date="1524655968002" expanded="true" signature="560:568" ph="{...}" />
+            <marker date="1524655993877" expanded="true" signature="560:568" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1881,6 +1890,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/AccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1015">
+          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -1888,14 +1905,6 @@
           <folding>
             <element signature="n#build#0;n#project#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
