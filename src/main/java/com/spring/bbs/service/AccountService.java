@@ -1,10 +1,17 @@
 package com.spring.bbs.service;
 
+import com.spring.bbs.entity.Account;
+
+import java.util.List;
+
 /**
  * @Description TODO
- * @Author 严旭江 Yan 873534617@qq.com
+ * @Author RickZhou
  * @date 2018/4/24-17:27
  * @Version 1.0
  */
 public interface AccountService {
+    boolean isAccount(String accountName,String password);
+    List<Account> getAllAccounts();
+    void RegisterValidate(String email,String account,String password);
 }
