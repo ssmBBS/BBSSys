@@ -20,7 +20,7 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
-    AccountDao accountDao;
+    static AccountDao accountDao;
     /*
     *
     * 检查该用户是否存在*/

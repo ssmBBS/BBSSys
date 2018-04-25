@@ -7,10 +7,6 @@ package com.spring.bbs.entity;
  * @Version 1.0
  */
 public class Account {
-    public static void main(String[] args) {
-        //TODO
-        System.out.println("test");
-    }
     /**用户的id*/
     private Integer id;
     /**账号名字 用于登录*/
