@@ -29,7 +29,7 @@
     <insert id="insert" parameterType="Comment">
         INSERT INTO COMMENT
         (accountid,pic,likes,commentDate,recentDate,content)
-        VALUES (#{accountid,#{pic},#{likes},now(),now(),#{content}})
+        VALUES (#{accountid},#{pic},#{likes},now(),now(),#{content}})
     </insert>
 
     <!--删除-->
