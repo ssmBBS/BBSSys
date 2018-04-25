@@ -24,6 +24,15 @@ public class Account {
     /**账户的权限*/
     private Integer rights;
     /* 用户验证码*/
+    private String activadeCode;
+
+    public String getActivadeCode() {
+        return activadeCode;
+    }
+
+    public void setActivadeCode(String activadeCode) {
+        this.activadeCode = activadeCode;
+    }
 
     public Account(){
 

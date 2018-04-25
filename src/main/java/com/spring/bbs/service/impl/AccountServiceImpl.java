@@ -49,7 +49,7 @@ public class AccountServiceImpl implements AccountService {
         account.setAccountName(accountName);
         StringBuffer sb=new StringBuffer("尊敬的"+account.getAccountName()+":<br>"+"点击下面链接激活账号，48小时生效，否则重新注册账号，链接只能使用一次，请尽快激活！</br>");
         sb.append("<a href=\"http://localhost:8080/magic/register.do?action=activate&activecode=");
-        sb.append(user.getActivecode());
+        sb.append(account.getActivadeCode());
         sb.append("\">");
         sb.append("点我激活注册");
         sb.append("</a>");
