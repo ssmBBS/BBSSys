@@ -22,9 +22,15 @@ public class AccountServiceImpl implements AccountService {
 
     @Autowired
     AccountDao accountDao;
+
+    @Override
+    public Account getAccount(String name) {
+        return accountDao.queryByName(name);
+    }
+
     /*
-    *
-    * 检查该用户是否存在*/
+        *
+        * 检查该用户是否存在*/
     @Override
     public boolean isAccount(String accountName, String password) {
         List<Account>accounts=accountDao.queryAll();

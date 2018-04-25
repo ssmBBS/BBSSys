@@ -11,6 +11,7 @@ import java.util.List;
  * @Version 1.0
  */
 public interface AccountService {
+    Account getAccount(String name);
     boolean isAccount(String accountName,String password);
     List<Account> getAllAccounts();
     void insert(String name,String password,String email);

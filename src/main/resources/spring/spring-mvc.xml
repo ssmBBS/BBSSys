@@ -23,8 +23,8 @@
     <aop:aspectj-autoproxy/>
 
     <!--视图解析器-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
+    <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/><!--设置JSP文件的目录位置-->
         <property name="suffix" value=".jsp"/>
     </bean>
 
