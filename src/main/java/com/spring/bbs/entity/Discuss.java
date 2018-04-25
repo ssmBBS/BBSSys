@@ -1,5 +1,7 @@
 package com.spring.bbs.entity;
 
+import java.util.Date;
+
 /**
  * @Description 回复类
  * @Author 严旭江 Yan 873534617@qq.com
@@ -14,7 +16,10 @@ public class Discuss {
     /**回复的内容*/
     private String content;
     /**回复对应的序列号 在该说说中的序列*/
-    private Integer serialNo;
+    //unnecessary, order by time desc
+    //private Integer serialNo;
+    /**回复的时间*/
+    private Date createTime;
 
     public Discuss(){
 
@@ -24,14 +29,8 @@ public class Discuss {
         this.accountId = accountId;
         this.commentId = commentId;
         this.content = content;
-        this.serialNo = 1;//初始序列号为1
-    }
-
-    public Discuss(Integer accountId, Integer commentId, String content, Integer serialNo) {
-        this.accountId = accountId;
-        this.commentId = commentId;
-        this.content = content;
-        this.serialNo = serialNo;
+        //this.serialNo = 1;//初始序列号为1
+        this.createTime = new Date();
     }
 
     public Integer getAccountId() {
@@ -58,11 +57,19 @@ public class Discuss {
         this.content = content;
     }
 
-    public Integer getSerialNo() {
-        return serialNo;
+//    public Integer getSerialNo() {
+//        return serialNo;
+//    }
+//
+//    public void setSerialNo(Integer serialNo) {
+//        this.serialNo = serialNo;
+//    }
+
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setSerialNo(Integer serialNo) {
-        this.serialNo = serialNo;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
