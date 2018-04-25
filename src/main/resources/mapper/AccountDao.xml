@@ -35,6 +35,6 @@
     </select>
 
     <insert id="insertAccount" useGeneratedKeys="true">
-        INSERT INTO account(accountName,password,email) values(#{accountName},#{password},#{email})
+       INSERT INTO account(accountName,password,email) values(#{accountName},#{password},#{email})
     </insert>
 </mapper>
