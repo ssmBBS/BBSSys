@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration
-        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration>
-    <mappers>
-    </mappers>
-</configuration>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.bbs.dao.AccountDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryByName" resultType="com.spring.bbs.entity.Account" parameterType="String">
+        <!-- 具体的sql -->
+        SELECT
+        id,
+        accountName,
+        password,
+        picPath,
+        email,
+        rights
+        FROM
+        account
+        WHERE
+        accountName = #{accountName}
+    </select>
+
+    <select id="queryAll" resultType="com.spring.bbs.entity.Account">
+        SELECT
+        id,
+        accountName,
+        password,
+        picPath,
+        email,
+        rights
+        FROM
+        account
+        ORDER BY
+        id
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <insert id="insertAccount" useGeneratedKeys="true">
+        INSERT INTO account(accountName,password,email) values(#{accountName},#{password},#{email})
+    </insert>
+</mapper>
