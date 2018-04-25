@@ -1,6 +1,7 @@
 package com.spring.bbs.dao;
 
 import com.spring.bbs.entity.Discuss;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -37,9 +38,9 @@ public interface DiscussDao {
 
     /**
      * 获取当前comment最大的楼层数目
-     * @param id
+     * @param commentId
      * @return
      */
-    Integer selectCount(Integer id);
+    Integer selectCount(@Param("commentId") Integer commentId);
 
 }
