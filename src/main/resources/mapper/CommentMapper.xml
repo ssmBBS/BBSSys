@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.spring.bbs.dao.CommentDao">
+    <sql id="baseList">
+        id,accountid,pic,likes,commentDate,recentDate,content
+    </sql>
+    <!--查询所有-->
+    <select id="select" resultType="Comment">
+        select
+        <include refid="baseList"/>
+        from comment
+        order by recentDate DESC
+    </select>
+    <!--更新  一般只是更新内容  以及 pic 以及 likes 以及 recentDate-->
+    <select id="update" parameterType="Comment" resultType="int">
+        update comment
+        set pic=#{pic},
+            content = #{content},
+            recentDate = now(),
+            likes = #{likes}
+        <where>
+            <if test="id!=null">and id = #{id}</if>
+            <if test="accountid !=null">and accountid = #{accountid}</if>
+        </where>
+    </select>
+    <!--插入-->
+    <insert id="insert" parameterType="Comment">
+        INSERT INTO COMMENT
+        (accountid,pic,likes,commentDate,recentDate,content)
+        VALUES (#{accountid,#{pic},#{likes},now(),now(),#{content}})
+    </insert>
+
+    <!--删除-->
+    <delete id="delete" parameterType="Comment">
+        DELETE FROM Comment
+        WHERE id = #{id}
+    </delete>
+
+    <!--根据搜寻条件搜索-->
+    <select id="selectByKey" parameterType="java.lang.String">
+        SELECT
+        <include refid="baseList"/>
+        FROM Comment
+        WHERE content LIKE '%#{key}%'
+        ORDER BY recentDate DESC
+    </select>
+</mapper>
