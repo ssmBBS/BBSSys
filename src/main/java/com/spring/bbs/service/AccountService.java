@@ -13,5 +13,6 @@ import java.util.List;
 public interface AccountService {
     boolean isAccount(String accountName,String password);
     List<Account> getAllAccounts();
+    void insert(String name,String password,String email);
     void RegisterValidate(String email,String account,String password);
 }

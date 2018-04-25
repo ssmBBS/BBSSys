@@ -41,6 +41,12 @@ public class AccountServiceImpl implements AccountService {
     public List<Account> getAllAccounts() {
         return accountDao.queryAll();
     }
+
+    @Override
+    public void insert(String name, String password, String email) {
+        accountDao.insertAccount(name,password, email);
+    }
+
     /*
        * 注册插入用户*/
     @Override
