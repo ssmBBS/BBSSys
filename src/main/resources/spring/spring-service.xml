@@ -41,4 +41,11 @@
 
     <!--配置基于注解的声明式事务-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- 开启spring aop 注解支持，要想aop真正生效，还需要把切面类配置成bean -->
+    <aop:aspectj-autoproxy/>
+
+
+    <!--验证添加-->
+    <aop:config proxy-target-class="true"/>
 </beans>

@@ -21,8 +21,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     AccountService accountService;
-    @RequestMapping(value = "/regist")
-    public ModelAndView regist(){
+    @RequestMapping(value = "/register")
+    public ModelAndView register(){
     ModelAndView modelAndView=new ModelAndView();
     accountService.insert("rick","123456","819894286@qq.com");
     List<Account> accounts=accountService.getAllAccounts();

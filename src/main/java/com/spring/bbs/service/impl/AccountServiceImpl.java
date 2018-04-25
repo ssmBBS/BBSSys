@@ -4,6 +4,7 @@ import com.spring.bbs.dao.AccountDao;
 import com.spring.bbs.entity.Account;
 import com.spring.bbs.service.AccountService;
 import com.spring.bbs.utils.SendEmail;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
-    static AccountDao accountDao;
+    AccountDao accountDao;
     /*
     *
     * 检查该用户是否存在*/
@@ -47,8 +48,7 @@ public class AccountServiceImpl implements AccountService {
         accountDao.insertAccount(name,password, email);
     }
 
-    /*
-       * 注册插入用户*/
+    /** 注册插入用户*/
     @Override
     public void RegisterValidate(String email,String accountName,String password) {
         Account account=new Account();
