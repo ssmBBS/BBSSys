@@ -31,9 +31,9 @@ public class UserController {
     return modelAndView;
     }
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public Object setJson(@RequestParam(value="name") String accountName,@RequestParam(value = "password") String password) throws IOException {
+    @ResponseBody
+    public Object setJson(@RequestParam(value="accountName") String accountName,@RequestParam(value = "password") String password) throws IOException {
         //ObjectMapper类是Jackson库的主要类。它提供一些功能将java对象转换成json
-        ObjectMapper mapper=new ObjectMapper();
         ResultInfo resultInfo=new ResultInfo();
         boolean judge=accountService.isAccount(accountName,password);
         if(judge==false){
@@ -49,9 +49,31 @@ public class UserController {
 
     }
 
-    @RequestMapping(value = "/loginPage")
-    public String loginPage(){
-        return "login";
+    @RequestMapping(value = "/validate")
+    @ResponseBody
+    public Object registValidate(@RequestParam(value="accountName") String accountName,@RequestParam(value = "email") String email){
+        ResultInfo resultInfo=new ResultInfo();
+        List<Account> accounts=accountService.getAllAccounts();
+        boolean result=true;
+        String reason="";
+        for(Account account:accounts){
+            if(account.getAccountName().equals(accountName)){
+                result=false;
+                reason="name";
+                resultInfo.setResult(result);
+                resultInfo.setReason(reason);
+                return resultInfo;
+            }
+            if(account.getEmail().equals(email)){
+                result=false;
+                reason="email";
+                resultInfo.setResult(result);
+                resultInfo.setReason(reason);
+                return resultInfo;
+            }
+        }
+        resultInfo.setResult(result);
+        return resultInfo;
     }
 
     @RequestMapping(value = "/registerPage")
