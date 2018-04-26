@@ -4,13 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.bbs.dto.ResultInfo;
 import com.spring.bbs.entity.Account;
 import com.spring.bbs.service.AccountService;
+import com.spring.bbs.service.impl.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
@@ -42,11 +41,23 @@ public class UserController {
             Account account=null;
             resultInfo.setData(account);
         }
-       else {
+        else {
             resultInfo.setResult(judge);
             Account account=accountService.getAccount(accountName);
         }
         return resultInfo;
 
     }
+
+    @RequestMapping(value = "/loginPage")
+    public String loginPage(){
+        return "login";
+    }
+
+    @RequestMapping(value = "/registerPage")
+    public String registerPage(){
+        return "register";
+    }
+
+
 }

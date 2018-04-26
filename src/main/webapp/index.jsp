@@ -1,7 +1,9 @@
-<html>
-<body>
-<h2>Hello World!</h2>
+<html lang="zh-cn">
+<head>
+</head>
+<body >
+    <% response.sendRedirect("/loginPage.do");%>
 </body>
-<a href="register">Regist</a>
-<%--<a href="login.html">login</a>--%>
+
 </html>
+

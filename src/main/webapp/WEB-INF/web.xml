@@ -5,9 +5,9 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>BBS System</display-name>
   <!--welcome pages-->
-  <welcome-file-list>
-    <welcome-file>/WEB-INF/pages/main.html</welcome-file>
-  </welcome-file-list>
+  <!--<welcome-file-list>-->
+    <!--<welcome-file>/WEB-INF/pages/main.html</welcome-file>-->
+  <!--</welcome-file-list>-->
   <!--初始化Spring容器-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -52,4 +52,8 @@
     <filter-name>characterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
