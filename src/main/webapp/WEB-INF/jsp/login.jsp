@@ -18,15 +18,13 @@
 				</div>
 				<div class="pwd">
 					<label>密　码</label><input type="password" class="text" id="value_2" placeholder="密码" name="value_2" tabindex="2">
-					<div>
-						<input type="button" class="submit" tabindex="3" value="登录" id="loginBtn">
-						<input type="button" class="submit" tabindex="4" value="注册" id="goRegister">
-					</div>
+					<input type="button" class="submit" tabindex="3" value="登录" id="loginBtn">
+					<label id="goRegister" style="color:#2aabd2;text-decoration-line: underline">注册</label>
 					<div class="check"></div>
-				</div>
+				</div><!--password-->
 				<div class="tip"></div>
-			</div>
-		</div>
+			</div><!--log-->
+		</div><!--input-->
 	</div>
     <div class="air-balloon ab-1 png"></div>
 	<div class="air-balloon ab-2 png"></div>
@@ -39,7 +37,8 @@
 
 
 <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>Fixed Browser：360、FireFox、Chrome、Safari、Opera、and so on do.</p>
+<p>BBS System created by us.</p>
 </div>
 
 <script>
