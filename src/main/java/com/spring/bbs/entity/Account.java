@@ -1,5 +1,7 @@
 package com.spring.bbs.entity;
 
+import java.util.Date;
+
 /**
  * @Description 用户类
  * @Author 严旭江 Yan 873534617@qq.com
@@ -21,6 +23,27 @@ public class Account {
     private Integer rights;
     /* 用户验证码*/
     private String activadeCode;
+    /*注册时间*/
+    private Date date=new Date();
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    /*验证用户状态*/
+    private int status=0;
 
     public String getActivadeCode() {
         return activadeCode;
