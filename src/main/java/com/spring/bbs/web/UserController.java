@@ -22,7 +22,8 @@ public class UserController {
     @Autowired
     AccountService accountService;
     @RequestMapping(value = "/register")
-    public ModelAndView register(){
+    @ResponseBody
+    public Object register(@RequestParam(value = "accountName")String accountName,@RequestParam(value = "password")String password,@RequestParam(value = "email")String email){
     ModelAndView modelAndView=new ModelAndView();
     accountService.insert("rick","123456","819894286@qq.com");
     List<Account> accounts=accountService.getAllAccounts();
@@ -30,6 +31,8 @@ public class UserController {
     modelAndView.setViewName("success");
     return modelAndView;
     }
+    /*
+    * 处理登陆页面请求*/
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public Object setJson(@RequestParam(value="accountName") String accountName,@RequestParam(value = "password") String password) throws IOException {
@@ -48,7 +51,8 @@ public class UserController {
         return resultInfo;
 
     }
-
+    /*
+    *验证用户名或邮箱是否存在 */
     @RequestMapping(value = "/validate")
     @ResponseBody
     public Object registValidate(@RequestParam(value="accountName") String accountName,@RequestParam(value = "email") String email){

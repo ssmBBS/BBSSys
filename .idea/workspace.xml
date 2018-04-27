@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f905499b-f085-4607-b855-bec6b065fcb5" name="Default" comment="123">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/BBS_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/BBS_war_exploded.xml" />
+    <list default="true" id="f905499b-f085-4607-b855-bec6b065fcb5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="254" column="47" lean-forward="true" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="47" />
+            <state relative-caret-position="662">
+              <caret line="251" column="36" lean-forward="true" selection-start-line="251" selection-start-column="36" selection-end-line="251" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -49,8 +43,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+            <state relative-caret-position="501">
+              <caret line="25" column="173" lean-forward="false" selection-start-line="25" selection-start-column="173" selection-end-line="25" selection-end-column="173" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,11 +52,53 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RegisterService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/RegisterService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/RegisterServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiscussService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/DiscussService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/web/indexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="63" column="11" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="90" selection-end-column="14" />
+            <state relative-caret-position="1827">
+              <caret line="63" column="11" lean-forward="false" selection-start-line="63" selection-start-column="11" selection-end-line="90" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -74,12 +110,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Mybatis" />
         <option value="Mybatis Mapper" />
         <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -142,8 +178,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/register.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spring/bbs/utils/RegisterValidate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spring/bbs/service/RegisterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/RegisterServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -228,8 +267,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -680,7 +719,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="D:/项目经验/Magic/Magic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
@@ -701,208 +740,6 @@
       <recent name="D:\RickZhou\JavaProject\BBSSys\src\main\webapp\WEB-INF" />
       <recent name="D:\RickZhou\JavaProject\BBSSys\src\main\webapp\pages" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/index.jsp</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_5_0_0_Alpha1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_2_0_RC1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_2_0_RC1.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.eot</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.woff2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/bootstrap/js/npm.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/css/form-elements.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/css/main.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/css/style.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/css/font-awesome.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/css/font-awesome.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/fonts/FontAwesome.otf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/fonts/fontawesome-webfont.eot</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/fonts/fontawesome-webfont.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/fonts/fontawesome-webfont.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/fonts/fontawesome-webfont.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/fonts/fontawesome-webfont.woff2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/animated.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/bordered-pulled.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/core.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/fixed-width.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/font-awesome.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/icons.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/larger.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/list.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/mixins.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/path.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/rotated-flipped.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/stacked.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/less/variables.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_animated.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_bordered-pulled.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_core.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_fixed-width.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_icons.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_larger.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_list.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_mixins.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_path.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_rotated-flipped.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_stacked.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/_variables.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/font-awesome/scss/font-awesome.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/ico/apple-touch-icon-114-precomposed.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/ico/apple-touch-icon-144-precomposed.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/ico/apple-touch-icon-57-precomposed.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/ico/apple-touch-icon-72-precomposed.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/ico/favicon.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/images/air-balloon-1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/images/air-balloon-2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/images/login-bg.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/images/login-foot.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/images/login.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/images/logo-login.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/img/backgrounds/1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/img/backgrounds/1@2x.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/img/ebook.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/img/ebook@2x.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/img/logo.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/img/logo@2x.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/DD_belatedPNG.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/fun.base.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/jQuery.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/jquery-1.11.1.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/jquery.backstretch.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/jquery.backstretch.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/placeholder.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/retina-1.1.0.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/retina-1.1.0.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/script.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/scripts.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/js/json2.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1508,7 +1345,8 @@
       <workItem from="1524653026847" duration="2826000" />
       <workItem from="1524656065358" duration="13482000" />
       <workItem from="1524718268614" duration="628000" />
-      <workItem from="1524756728385" duration="8459000" />
+      <workItem from="1524756728385" duration="8493000" />
+      <workItem from="1524797468889" duration="4563000" />
     </task>
     <task id="LOCAL-00001" summary="idea commit">
       <created>1524545740145</created>
@@ -1657,11 +1495,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524675272625</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="123">
+      <created>1524765376866</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1524765376866</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43791000" />
+    <option name="totallyTimeSpent" value="48388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -1683,13 +1528,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36402115" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32592592" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32592592" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18867925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1701,6 +1545,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1731,38 +1576,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6206">
-          <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-          <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/dao/DiscussDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/entity/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#542#543#0" expanded="false" />
-            <element signature="e#598#599#0" expanded="false" />
-            <element signature="e#646#647#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/entity/ChatRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -1924,13 +1737,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.form.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/json2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/json2.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/ChatRecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -1979,14 +1786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/DiscussService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -2005,7 +1804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2017,19 +1815,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/login/login.js" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.2.RELEASE/spring-web-4.3.2.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2037,7 +1827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2045,7 +1834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2053,7 +1841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="419" column="0" lean-forward="false" selection-start-line="419" selection-start-column="0" selection-end-line="419" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2061,7 +1848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2069,7 +1855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="483" column="0" lean-forward="false" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2077,7 +1862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2085,18 +1869,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="100" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -2105,14 +1881,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="168" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-transitional.dtd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16336">
@@ -2123,27 +1892,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="63" column="11" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="90" selection-end-column="14" />
+        <state relative-caret-position="1827">
+          <caret line="63" column="11" lean-forward="false" selection-start-line="63" selection-start-column="11" selection-end-line="90" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="251" column="36" lean-forward="true" selection-start-line="251" selection-start-column="36" selection-end-line="251" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/web/indexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+        <state relative-caret-position="501">
+          <caret line="25" column="173" lean-forward="false" selection-start-line="25" selection-start-column="173" selection-end-line="25" selection-end-column="173" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/utils/RegisterValidate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="254" column="47" lean-forward="true" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="47" />
+        <state relative-caret-position="232">
+          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/RegisterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/DiscussService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/spring/bbs/service/impl/RegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
