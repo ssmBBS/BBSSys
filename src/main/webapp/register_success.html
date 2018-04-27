@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+    <title>Friends</title>
+    <link rel="stylesheet" type="text/css" href="css/email-css/email.css">
+</head>
+<body>
+<div class="pic">
+    <img src="image/logo3.png">
+    <h1>激活成功！已帮您自动登录！<br/></h1>
+    <h1>欢迎进入Friends大学生社交网站！</h1>
+</div>
+<div class="timer">
+    <script>
+        var t=5;//设定跳转的时间
+        setInterval("refer()",1000); //启动1秒定时
+        function refer(){
+            if(t==0){
+                window.location.href="main.html"; //#设定跳转的链接地址
+            }
+            document.getElementById('show').innerHTML=""+t+"秒后跳转到兴趣选择页面"; // 显示倒计时
+            t--; // 计数器递减
+
+        }
+    </script>
+    <span id="show"></span>
+
+
+</div>
+
+
+</body>
+</html>

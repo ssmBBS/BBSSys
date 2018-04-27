@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <%String ctxPath = request.getContextPath();%> <!-- 设置一个变量，获取页面加载路径 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/form-elements.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+<!-- Top menu -->
+<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Bootstrap Registration Form Template</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="top-navbar-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+							<span class="li-text">
+								Put some text or
+							</span>
+                    <a href="#"><strong>links</strong></a>
+                    <span class="li-text">
+								here, or some icons:
+							</span>
+                    <span class="li-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-envelope"></i></a>
+								<a href="#"><i class="fa fa-skype"></i></a>
+							</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Top content -->
+<div class="top-content">
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1><strong>Bootstrap</strong> Registration Form</h1>
+                    <div class="description">
+                        <p>
+                            This is a free responsive registration form made with Bootstrap.
+                            Download it on <a href="#"><strong>AZMIND</strong></a>, customize and use it as you like!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 book">
+                    <img src="img/ebook.png" alt="">
+                </div>
+                <div class="col-sm-5 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Get our eBook</h3>
+                            <p>Fill in the form below to get instant access:</p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-first-name">Account name</label>
+                                <input type="text" name="form-first-name" placeholder="Account name..." class="form-first-name form-control" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Password</label>
+                                <input type="password" name="form-last-name" placeholder="Password..." class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-email">Email</label>
+                                <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                            </div>
+                            <div class="form-group">
+                               <!-- <label class="sr-only" for="form-code">ActiveCode</label>
+                                <input type="text" name="form-code" placeholder="ActiveCode.." class="form-code form-control" id="form-code">-->
+                            </div>
+                            <button type="submit" class="btn" id="register">注册RightNow</button>
+                            <button type="button" class="btn" id="validate">验证</button>
+                            <button type="submit" class="btn" id="returnLogin">返回登录界面</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Javascript -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#validate").click(function () {
+            var email = $("#form-email").val();
+            var accountName = $("#form-first-name").val();
+            var password = $("#form-last-name").val();
+            if (accountName == "") {
+                window.alert("用户名不能为空");
+                return false;
+            }
+            if (password == "") {
+                window.alert("密码不能为空");
+                return false;
+            }
+            /**
+             * 正则匹配
+             */
+            var pattern = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/
+            if(!pattern.test(email)){
+                window.alert("请输入正确的邮箱格式")
+                return;
+            }
+            /**
+             * 发送邮件的ajax请求
+             * code to insert
+             * 邮件为 email
+             */
+            /**传送后端数据对象  通过ajax进行请求*/
+            var data = {accountName: accountName,email:email};
+            $.ajax({
+                url: "validate.do", /**请求的url*/
+                data: data,
+                type: "post", /**post方式*/
+                dataType: "json", /**数据类型*/
+                beforeSend: function () {
+                    /**登录之前  无法继续再按*/
+                    //$("#loginBtn").enable(false);
+                },
+                /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                success: function (result) {
+                    console.log(result);
+                    /**code to insert*/
+                    //根据后端返回的不同结果 做相应处理
+                    if(result.result==true){
+                        alert("恭喜你用户名，邮箱可以注册")
+                    }
+                    else {
+                        if(result.reason=="name"){
+                            alert("用户名已经存在");
+                            return;
+                        }
+                        else if(result.reason=="email"){
+                            alert("邮箱已经存在");
+                            return;
+                        }
+                    }
+                },
+                /**error 出现错误*/
+                error: function () {
+                    window.alert("there are some error");
+                }
+            })
+        });
+
+        $("#returnLogin").click(function () {
+            //转url到登录页面
+            window.alert("成功返回登录页面");
+            window.location.href = "login.html";
+        });
+        $("#register").click(function () {
+            var email = $("#form-email").val();
+            var accountName = $("#form-first-name").val();
+            var password = $("#form-last-name").val();
+            if (accountName == "") {
+                window.alert("用户名不能为空");
+                return false;
+            }
+            if (password == "") {
+                window.alert("密码不能为空");
+                return false;
+            }
+            /**
+             * 正则匹配
+             */
+            var pattern = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/
+            if(!pattern.test(email)){
+                window.alert("请输入正确的邮箱格式")
+                return;
+            }
+            var data = {accountName: accountName,password:password,email:email};
+            $.ajax({
+                url: "registor.do", /**请求的url*/
+                data: data,
+                type: "POST", /**post方式*/
+                dataType: "json", /**数据类型*/
+                beforeSend: function () {
+                    /**登录之前  无法继续再按*/
+                    alert("验证信息已经发送到您的邮箱，请查收")
+
+                },
+                /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                success: function (result) {
+                    console.log(result);
+                    /**code to insert*/
+                    //根据后端返回的不同结果 做相应处理
+                    if(result.result==true){
+                        alert("验证信息已经发送到您的邮箱，请查收");
+                        window.location.href = "login.html";
+                    }
+                    else {
+                        alert("邮箱验证发送失败");
+                    }
+                },
+                /**error 出现错误*/
+                error: function () {
+                   window.location.href="login.html";
+                }
+            })
+        });
+    })
+
+</script>
+
+</body>
+</html>
