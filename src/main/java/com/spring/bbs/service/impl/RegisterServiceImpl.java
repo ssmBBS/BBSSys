@@ -75,4 +75,9 @@ public class RegisterServiceImpl implements RegisterService {
     public Account getAccount() {
         return account;
     }
+
+    @Override
+    public Account getUser() {
+        return accountService.getAccount(account.getAccountName());
+    }
 }

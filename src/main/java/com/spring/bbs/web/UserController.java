@@ -36,7 +36,7 @@ public class UserController {
     * 处理登陆页面请求*/
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
-    public Object setJson(@RequestParam(value="accountName") String accountName,@RequestParam(value = "password") String password) throws IOException {
+    public Object setJson(@RequestParam(value="accountName") String accountName,@RequestParam(value = "password") String password,HttpSession session) throws IOException {
         //ObjectMapper类是Jackson库的主要类。它提供一些功能将java对象转换成json
         ResultInfo resultInfo=new ResultInfo();
         boolean judge=accountService.isAccount(accountName,password);
@@ -48,7 +48,7 @@ public class UserController {
         else {
             resultInfo.setResult(judge);
             Account account=accountService.getAccount(accountName);
-            resultInfo.setData(account);
+            session.setAttribute("account",account);
         }
         return resultInfo;
 
@@ -99,26 +99,38 @@ public class UserController {
         service.processActivate(validateCode);//调用激活方法
         String contextPathString = session.getServletContext()
                 .getRealPath("/");
-        contextPathString += "/Users/"+service.getAccount();
+        System.out.println(contextPathString);
+        String id=service.getAccount().getAccountName();
+        contextPathString += "Users";
+        System.out.println(contextPathString);
         File parentfile = new File(contextPathString);
         if (!parentfile.exists() && !parentfile.isDirectory()) {
             if (!parentfile.mkdir())
                 System.out.println("目录创建失败");
         }
-        String comment=contextPathString+"/commentPicture";
+        contextPathString+="\\"+id;
+        System.out.println(contextPathString);
+        File parentfile0 = new File(contextPathString);
+        if (!parentfile0.exists() && !parentfile0.isDirectory()) {
+            if (!parentfile0.mkdir())
+                System.out.println("目录创建失败");
+        }
+        String comment=contextPathString+"\\commentPicture";
+        System.out.println(comment);
         File parentfile1 = new File(comment);
         if (!parentfile1.exists() && !parentfile1.isDirectory()) {
             if (!parentfile1.mkdir())
                 System.out.println("目录创建失败");
         }
-        String picture=contextPathString+"/picture";
+        String picture=contextPathString+"\\picture";
+        System.out.println(picture);
         File parentfile2 = new File(picture);
         if (!parentfile2.exists() && !parentfile2.isDirectory()) {
             if (!parentfile2.mkdir())
                 System.out.println("目录创建失败");
         }
-
-        session.setAttribute("account",service.getAccount());
+        Account account=service.getUser();
+        session.setAttribute("account",account);
         request.getRequestDispatcher("register_success.html").forward(request,response);
     }
     @RequestMapping(value = "/registerPage")

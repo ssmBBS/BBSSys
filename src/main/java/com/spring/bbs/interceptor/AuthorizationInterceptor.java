@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  *         Created by RickZhou on 2018/4/10 0010.
  */
 public class AuthorizationInterceptor implements HandlerInterceptor {
-    private static final String[]IGNORE_URI={"/loginForm","/login"};
+    private static final String[]IGNORE_URI={"/userPage","/managePage"};
     /*
     * preHandle方法是进行处理器拦截用的，该方法在controller处理之前进行调用
     * 该方法的返回值为true拦截器才会继续往下执行，该方法的返回值为false的时候整个请求就结束了

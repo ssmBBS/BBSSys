@@ -12,4 +12,5 @@ public interface RegisterService {
     void RegisterValidate(String accountName,String password,String email);
     void processActivate( String validateCode) throws ServiceException;
     Account getAccount();
+    Account getUser();
 }

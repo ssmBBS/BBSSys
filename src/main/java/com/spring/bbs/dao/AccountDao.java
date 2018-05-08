@@ -15,6 +15,7 @@ import java.util.List;
 @Repository
 public interface AccountDao {
     public Account queryByName(@Param("accountName") String accountName);
+
     public List<Account> queryAll();
     public void insertAccount(@Param("accountName")String accountName,@Param("password") String password,@Param("email") String email);
 }

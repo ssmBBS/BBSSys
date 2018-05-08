@@ -28,6 +28,18 @@ import java.util.List;
  */
 @Controller
 public class indexController {
-
+    @RequestMapping(value = "/mainPage")
+    @ResponseBody
+    Object mainPage(HttpSession session){
+        ResultInfo resultInfo=new ResultInfo();
+        Account account= (Account) session.getAttribute("account");
+        resultInfo.setData(account);
+        return resultInfo;
+    }
+    @RequestMapping(value = "/outLogin")
+    void outLogin(HttpSession session,HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        session.invalidate();
+        request.getRequestDispatcher("login.html").forward(request,response);
+    }
 
 }
