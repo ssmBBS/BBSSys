@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @Description DiscussDao
- * @Author 严旭江 Yan 873534617@qq.com
+ * @Author RickZhou
  * @date 2018/4/24-23:53
  * @Version 1.0
  */

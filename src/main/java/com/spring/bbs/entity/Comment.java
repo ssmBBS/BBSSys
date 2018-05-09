@@ -12,7 +12,7 @@ public class Comment {
     /**id*/
     private Integer id;
     /**发起说说的账户id*/
-    private Integer accountId;
+    private String accountId;
     /**pic  说说里面的图片路径*/
     private String pic;
     /**点赞数目*/
@@ -22,19 +22,32 @@ public class Comment {
     /**最新回复的日期*/
     private Date recentDate;
 
+
+    /*内容*/
+    private String text;
+    /*comment的title*/
+    private String title;
     public Comment(){
 
     }
 
-    public Comment(Integer accountId, String pic) {
+    public Comment(String accountId, String pic) {
         this.accountId = accountId;
         this.pic = pic;
         this.likes = 0;
         this.commentDate = new Date();
         this.recentDate = new Date();
     }
-
-    public Comment(Integer accountId, String pic, Integer likes, Date commentDate, Date recentDate) {
+    public Comment(String accountId, String pic,String text,String title){
+      this.accountId=accountId;
+        this.pic = pic;
+        this.likes = 0;
+        this.commentDate = new Date();
+        this.recentDate = new Date();
+        this.text=text;
+        this.title=title;
+    }
+    public Comment(String accountId, String pic, Integer likes, Date commentDate, Date recentDate) {
         this.accountId = accountId;
         this.pic = pic;
         this.likes = likes;
@@ -50,11 +63,11 @@ public class Comment {
         this.id = id;
     }
 
-    public Integer getAccountId() {
+    public String getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(Integer accountId) {
+    public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
 
@@ -88,5 +101,12 @@ public class Comment {
 
     public void setRecentDate(Date recentDate) {
         this.recentDate = recentDate;
+    }
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

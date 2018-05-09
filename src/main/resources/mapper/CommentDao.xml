@@ -28,8 +28,8 @@
     <!--插入-->
     <insert id="insert" parameterType="Comment">
         INSERT INTO COMMENT
-        (accountid,pic,likes,commentDate,recentDate,content)
-        VALUES (#{accountid},#{pic},#{likes},now(),now(),#{content}})
+        (accountid,pic,likes,commentDate,recentDate,content,type,title)
+        VALUES (#{accountid},#{pic},#{likes},now(),now(),#{content},#{type},#{title})
     </insert>
 
     <!--删除-->
@@ -43,7 +43,15 @@
         SELECT
         <include refid="baseList"/>
         FROM Comment
-        WHERE content LIKE '%#{key}%'
+        WHERE acc LIKE '%#{key}%'
+        ORDER BY recentDate DESC
+    </select>
+    <!--根据用户名字搜索-->
+    <select id="selectByName" resultType="Comment" parameterType="java.lang.String">
+        SELECT
+        <include refid="baseList"/>
+        FROM Comment
+        WHERE accountid =#{accountName}
         ORDER BY recentDate DESC
     </select>
 </mapper>
