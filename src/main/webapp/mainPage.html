@@ -1,0 +1,274 @@
+<html>
+<head>
+
+    <title>我珈小馆</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/NavBar.js"></script>
+    <style>
+        a{
+            font-weight: 700;
+        }
+        .btn-group button{
+            width: 33%;
+        }
+        body{
+            background-image: url("/Resource/bg/31.jpg");
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+        }
+        *{
+            font-family:"Microsoft YaHei UI";
+        }
+    </style>
+</head>
+
+<body>
+<!--<button id="submit0" name="submit0">提交</button>-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="form1" method="post"  enctype="multipart/form-data">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-weight: 700;">发布新贴</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container" style="width: 100%;">
+
+                        <div class="row" style="padding-top:10px;">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>标题</label>
+                                    <input type="text" id="task_title" name="task_title" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>类型:</label>
+                                    <select name="type" class="form-control" id="type">
+                                        <option value="study">学习</option>
+                                        <option value="entertainment">娱乐</option>
+                                        <option value="life">生活</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                <input type="file" id="pic" name="pic" accept="image/jpeg,image/jpg,image/png," data-delay="150">
+                                </div>
+                               <!-- <div class="form-group">
+                                    &lt;!&ndash;datepicker属性不被火狐浏览器支持&ndash;&gt;
+                                    <label>日期:</label>
+                                    <input type="date"  class="form-control" name="ddl" style="width:200px;" />
+                                </div>
+                                <div class="form-group">
+                                    <label>时间:</label>
+                                    <input type="time"  class="form-control" name="time" style="width:200px;" />
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:10px;">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>内容</label>
+                                    <textarea name="details" id="details" class="form-control" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 任务发布文本框 -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  <!--  <button type="submit"  name="submit0" id="submit0">提交</button>-->
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:5%;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">我珈小馆</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toMain()">首页</a>
+                </li>
+                
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>                </li>
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toFriends()">好友</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a>你好，<span id="account"class="glyphicon glyphicon-user"></span></a>
+                    <!--
+
+                    $("#account").Text();
+                    -->
+                </li>
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toMessage()"><span class="glyphicon glyphicon-bell"></span>消息</a>
+                </li>
+                <li>
+                    <a name= "signUpButton" href="outLogin.do">退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <form name = "nav" action="center.yue" method="post" style="margin-bottom: 0px;"></form>
+</nav>
+
+<div class="container" style="padding-top:5%;">
+    <!-- 页面最上部分留空 -->
+    <div class="row" style="max-height:1000px;min-height:800px;">
+        <div class="col-xs-2">
+            <!--<p style="font-weight: 700;font-size: large;">
+                广告招租
+            </p>-->
+        </div>
+
+        <div class="col-xs-6" style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8);margin: 0 10 0 10">
+            <!-- 任务发布部分 -->
+
+            <div class="row">
+                    <!--模态框按钮-->
+                <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">发布新贴</button>
+            </div>
+            <!-- 任务浏览部分 -->
+            <div class="row" >
+                <div class="col-xs-12" style="min-height:800px; max-height:1000px;">
+                            <!-- 导航栏 -->
+                            <div class="row">
+                                <div class="col-xs-7">
+                                    <form name="Taskbrowse" class="navbar-form navbar-left" action="taskchoose.yue" method = "post" style="width: 100%">
+                                        <!-- 根据类别查询任务 -->
+                                        <div class="btn-group" style="width: 100%">
+                                            <button type="submit" class="btn btn-default" name='tasktype' value='entertainment'><span style="margin-right: 2px" class="glyphicon glyphicon-film"></span><b>娱乐</b></button>
+                                            <button type="submit" class="btn btn-default" name = 'tasktype' value="life"><span style="margin-right: 2px"  class="glyphicon glyphicon-cutlery"></span><b>生活</b></button>
+                                            <button id="submit0" class="btn btn-default" name = 'tasktype' value="study"><span style="margin-right: 2px" class="glyphicon glyphicon-pencil"></span><b>学习</b></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xs-5">
+                                    <form class="navbar-form navbar-left" action="TargetWordSearch.yue" method="post">
+                                        <div class="input-group">
+                                            <input type="text" name="targetword"  class="form-control" placeholder="Search">     
+                                             <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="font-size:20px;"></span></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <hr style="margin-top: 0">
+                            <!-- 任务显示 -->
+                            <div class="row">
+                                <div class="col-xs-12" >                              
+                                        <div class="well well-lg" style="min-height:200px;border-radius: 4px;padding: 10px 10px;">
+                                        </div>
+                                </div>
+                            </div>
+                </div></div>
+        </div>
+
+
+       <div class="col-xs-2" >
+            <div style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8)">
+                <img src="./images/avator.jpg" class="img-circle img-responsive" style="padding: 12 12 12 12 ">
+                <span id="userId"></span>
+            </div> 
+            <hr>
+            <div>
+                <a href="#" class="list-group-item">我的收藏</a>
+                <a href="#" class="list-group-item">我的关注</a>
+                <a href="#" class="list-group-item">我的好友</a>
+                <a href="#" class="list-group-item">历史记录</a>
+            </div>
+        </div>
+
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "mainPage.do", /**请求的url*/
+            data:{},
+            type: "get", /**post方式*/
+            dataType: "json", /**数据类型*/
+            beforeSend: function () {
+                /**登录之前  无法继续再按*/
+                //$("#loginBtn").enable(false);
+            },
+            /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+            success: function (result) {
+                var account=result.data;
+                var accountName=account.accountName;
+                $("#account").text(accountName);
+                $("#userId").text(accountName);
+            },
+            /**error 出现错误*/
+            error: function () {
+                window.alert("there are some error");
+            }
+        });
+        /*$("#submitButton").click(function () {
+            /!*$.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "upload.do" ,//url
+                data: $('#form1').serialize(),
+                success: function (result) {
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.result == true) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });*!/
+            alert("可以");
+        });*/
+        $("#submit0").click(function () {
+            //转url到登录页面
+            console.log("pass");
+        });
+    });
+</script>
+<!--<script type="text/javascript">
+    function uploadPic() {
+        // 上传设置
+        Console.log("pass");
+        var options = {
+            // 规定把请求发送到那个URL
+            url: "upload.do",
+            // 请求方式
+            type: "post",
+            // 服务器响应的数据类型
+            dataType: "json",
+            // 请求成功时执行的回调函数
+            success: function(data, status, xhr) {
+                // 图片显示地址
+               alert("1")
+            }
+        };
+
+        $("#form1").ajaxSubmit(options);
+    }
+</script>-->
+</html>

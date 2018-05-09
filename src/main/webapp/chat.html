@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>char room</title>
+    <script type="application/javascript">
+        //创建对象
+        var Chat=new Object();
+        Chat.socket=null;
+        //判断是否支持websocket
+        Chat.connect=function (host) {
+            if ('WebSocket' in window) {
+                Chat.socket = new WebSocket(host);
+            }
+            else {
+                Console.log('is not support');
+                return;
+            }
+            Chat.socket.onopen = function () {
+                Console.log('Info:WebSocket connection opened');
+                //用户按下一个键盘按键时会触发onkeydown事件
+                document.getElementById('chat').onkeydown = function (event) {
+                    if (event.keyCode == 13) {
+                        Chat.sendMessage();
+                    }
+                };
+            };
+            //链接关闭时触发onclose事件
+            Chat.socket.onclose = function () {
+                document.getElementById('chat').onkeydown = null;
+                Console.log('Info:WebSocket closed');
+            };
+            //收到服务器端发来的信息后触发message
+            Chat.socket.onmessage = function (message) {
+                alert('Somebody send message')
+                Console.log(message.data);
+            };
+        };
+        //初始化
+        Chat.initialize=function () {
+            Chat.connect('ws://localhost:8080/Chat');
+        };
+        //发送数据
+        Chat.sendMessage=function () {
+            var message=document.getElementById('name').value;
+            message+="say: "+document.getElementById('chat').value;
+            if(message!=''&&document.getElementById('name').value!=''){
+                //将信息发送给服务器端
+                Chat.socket.send(message);
+                //清空
+                document.getElementById('chat').value='';
+            }
+        };
+        var Console=new Object();
+        Console.log=function (message) {
+            var console=document.getElementById('console');
+            var p=document.createElement('p');
+            p.style.wordWrap='break-word';
+            p.innerHTML=message;
+            console.appendChild(p);
+            while (console.child){
+                console.removeChild(console.firstChild);
+            }
+            console.scrollTop=console.scrollHeight;
+        }
+        Chat.initialize();
+    </script>
+</head>
+<body>
+<div>
+    <p>
+        name:<input type="text" id="name" placeholder="input name"/>
+    </p>
+    <p>
+        <input type="text" placeholder="input content" id="chat"/>
+    </p>
+    <div id="console-container">
+        <div id="console"></div>
+    </div>
+</div>
+</body>
+</html>
