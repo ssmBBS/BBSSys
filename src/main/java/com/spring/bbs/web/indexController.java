@@ -118,7 +118,7 @@ public class indexController {
                 }
                 // 上传图片
                 pic.transferTo(new File(url));
-                picPath=url;
+                picPath=path;
             }
             else {
                 picPath="";
