@@ -70,7 +70,7 @@ public class indexController {
         String type= (String) session.getAttribute("type");
         List<Comment>comments=commentDao.selectByType(type);
         resultInfo.setData(comments);
-        return comments;
+        return resultInfo;
     }
     @RequestMapping(value = "/upload",method = RequestMethod.POST)
     void upload(@RequestParam("title")String title,@RequestParam("details")String text,@RequestParam("type")String type,@RequestParam("pic")MultipartFile pic,HttpSession session,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -109,7 +109,7 @@ public class indexController {
                         System.out.println("目录创建失败");
                 }
                 // 图片上传的相对路径（因为相对路径放到页面上就可以显示图片）
-                String path = "\\Users\\"+account.getAccountName()+"\\commentPicture\\" + name + "." + extension;
+                String path = "Users\\"+account.getAccountName()+"\\commentPicture\\" + name + "." + extension;
                 // 图片上传的绝对路径
                 String url = request.getSession().getServletContext().getRealPath("") + path;
                 File dir = new File(url);
