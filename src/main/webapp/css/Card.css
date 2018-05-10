@@ -1,0 +1,29 @@
+.Card{
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    box-sizing: border-box;
+    padding: 12px 16px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+.Icon{
+    height: 50px;
+    width: 50px;
+    margin: 0 10;
+}
+.User{
+    font-size: 20px;
+}
+.TextContent{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.CardFooter{
+    padding: 10 0;
+}
+.MetaInfo{
+}
