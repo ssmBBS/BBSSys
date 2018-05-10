@@ -180,6 +180,35 @@
 				</div>
 			</div>
 		</div>
-
+<div id="content"></div>
 		</body>
+	<script>
+        $(document).ready(function () {
+                $.ajax({
+                    url: "getContent.do", /**请求的url*/
+                    data:{},
+                    type: "get", /**post方式*/
+                    dataType: "json", /**数据类型*/
+                    beforeSend: function () {
+                        /**登录之前  无法继续再按*/
+                        //$("#loginBtn").enable(false);
+                    },
+                    /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                    success: function (result) {
+                        alert("欢迎查看content");
+                        $.each(result.data, function(i, item) {
+                            $("#content").append(
+                                "<div>" + item.accountid + "</div>" +
+                                "<div>" + item.title    + "</div>" +
+                                "<div>" + item.type + "</div><hr/>");
+                        });
+                    },
+                    /**error 出现错误*/
+                    error: function () {
+                        window.alert("there are some error");
+                    }
+                })
+            })
+        });
+	</script>
 	</html>

@@ -62,7 +62,8 @@ public class indexController {
     session.setAttribute("type",type);
     request.getRequestDispatcher("content.html").forward(request,response);
     }
-    @RequestMapping(value = "getContent")
+    @RequestMapping(value = "/getContent")
+    @ResponseBody
     Object getContent(HttpSession session){
         ResultInfo resultInfo=new ResultInfo();
         resultInfo.setResult(true);
