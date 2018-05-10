@@ -111,7 +111,7 @@
 
 		<div class="container" style="padding-top: 3%">
 			<div class="row" >
-				<div class="col-xs-6 col-xs-offset-3">
+				<div class="col-xs-6 col-xs-offset-3" name="DisplayArea">
 					<!--<div class="Question Card">
 						<h2>《传说之下》这个《undertale》的译名到底好不好？</h2>
 						<div class="MetaInfo">
@@ -197,8 +197,8 @@
                     success: function (result) {
                         var data=result.data;
                         $.each(data, function(i,val){
-                            var txt1=" <div class='Question Card'><h2>"+val.title
-								+"</h2>  <div class='MetaInfo'> <img class='Icon' src='"
+                            var txt1=" <div class='Answer Card'>" +
+								"<div class='MetaInfo'> <img class='Icon' src='"
 								+val.pic+"'>"
 								+"<span class='User'>"+val.accountid
 								+"</span><button class='btn btn-info  pull-right'>+关注</button>"
@@ -209,7 +209,8 @@
 								+" <button class='btn btn-primary  pull-right'>回复</button>"
 								+"</div> </div>";
 								// 以 HTML 创建新元素
-                            $("body").append(txt1);
+								document.getElementsByName("DisplayArea").append(txt1);
+//                            	$("body").append(txt1);
                         });
                     },
                     /**error 出现错误*/
