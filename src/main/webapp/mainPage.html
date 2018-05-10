@@ -30,7 +30,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form id="form1" method="post"  enctype="multipart/form-data">
+            <form id="myform" name="myform" method="post" enctype="multipart/form-data" action="upload.do">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="myModalLabel" style="font-weight: 700;">发布新贴</h4>
@@ -42,7 +42,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>标题</label>
-                                    <input type="text" id="task_title" name="task_title" class="form-control">
+                                    <input type="text" id="title" name="title" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>类型:</label>
@@ -53,17 +53,17 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                <input type="file" id="pic" name="pic" accept="image/jpeg,image/jpg,image/png," data-delay="150">
+                                    <input type="file" id="pic" name="pic" accept="image/jpeg,image/jpg,image/png," data-delay="150">
                                 </div>
-                               <!-- <div class="form-group">
-                                    &lt;!&ndash;datepicker属性不被火狐浏览器支持&ndash;&gt;
-                                    <label>日期:</label>
-                                    <input type="date"  class="form-control" name="ddl" style="width:200px;" />
-                                </div>
-                                <div class="form-group">
-                                    <label>时间:</label>
-                                    <input type="time"  class="form-control" name="time" style="width:200px;" />
-                                </div>-->
+                                <!-- <div class="form-group">
+                                     &lt;!&ndash;datepicker属性不被火狐浏览器支持&ndash;&gt;
+                                     <label>日期:</label>
+                                     <input type="date"  class="form-control" name="ddl" style="width:200px;" />
+                                 </div>
+                                 <div class="form-group">
+                                     <label>时间:</label>
+                                     <input type="time"  class="form-control" name="time" style="width:200px;" />
+                                 </div>-->
                             </div>
                         </div>
                         <div class="row" style="padding-top:10px;">
@@ -80,7 +80,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                  <button type="submit"  name="submit0" id="submit0">提交</button>
+                    <button type="button"  class="btn btn-primary" name="submit0" id="submit0">提交</button>
                 </div>
             </form>
         </div>
@@ -98,7 +98,7 @@
                 <li>
                     <a name= "signUpButton" href="#" onclick="toMain()">首页</a>
                 </li>
-                
+
                 <li>
                     <a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>                </li>
                 <li>
@@ -138,53 +138,53 @@
             <!-- 任务发布部分 -->
 
             <div class="row">
-                    <!--模态框按钮-->
+                <!--模态框按钮-->
                 <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">发布新贴</button>
             </div>
             <!-- 任务浏览部分 -->
             <div class="row" >
                 <div class="col-xs-12" style="min-height:800px; max-height:1000px;">
-                            <!-- 导航栏 -->
-                            <div class="row">
-                                <div class="col-xs-7">
-                                    <form name="Taskbrowse" class="navbar-form navbar-left" action="taskchoose.yue" method = "post" style="width: 100%">
-                                        <!-- 根据类别查询任务 -->
-                                        <div class="btn-group" style="width: 100%">
-                                            <button type="submit" class="btn btn-default" name='tasktype' value='entertainment'><span style="margin-right: 2px" class="glyphicon glyphicon-film"></span><b>娱乐</b></button>
-                                            <button type="submit" class="btn btn-default" name = 'tasktype' value="life"><span style="margin-right: 2px"  class="glyphicon glyphicon-cutlery"></span><b>生活</b></button>
-                                            <button type="submit" class="btn btn-default" name = 'tasktype' value="study"><span style="margin-right: 2px" class="glyphicon glyphicon-pencil"></span><b>学习</b></button>
-                                        </div>
-                                    </form>
+                    <!-- 导航栏 -->
+                    <div class="row">
+                        <div class="col-xs-7">
+                            <form name="Taskbrowse" class="navbar-form navbar-left" action="taskchoose.yue" method = "post" style="width: 100%">
+                                <!-- 根据类别查询任务 -->
+                                <div class="btn-group" style="width: 100%">
+                                    <a href="content.do?type=enterprise"><button id="enterprise" class="btn btn-default" name='tasktype' value='entertainment'><span style="margin-right: 2px" class="glyphicon glyphicon-film"></span><b>娱乐</b></button></a>
+                                    <a href="content.do?type=life"><button id="life" class="btn btn-default" name = 'tasktype' value="life"><span style="margin-right: 2px"  class="glyphicon glyphicon-cutlery"></span><b>生活</b></button></a>
+                                    <a href="content.do?type=learn"><button id="learn" class="btn btn-default" name = 'tasktype' value="study"><span style="margin-right: 2px" class="glyphicon glyphicon-pencil"></span><b>学习</b></button></a>
                                 </div>
-                                <div class="col-xs-5">
-                                    <form class="navbar-form navbar-left" action="TargetWordSearch.yue" method="post">
-                                        <div class="input-group">
-                                            <input type="text" name="targetword"  class="form-control" placeholder="Search">     
-                                             <span class="input-group-btn">
+                            </form>
+                        </div>
+                        <div class="col-xs-5">
+                            <form class="navbar-form navbar-left" action="TargetWordSearch.yue" method="post">
+                                <div class="input-group">
+                                    <input type="text" name="targetword"  class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
                                                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="font-size:20px;"></span></button>
                                             </span>
-                                        </div>
-                                    </form>
                                 </div>
-                            </div>
+                            </form>
+                        </div>
+                    </div>
 
-                            <hr style="margin-top: 0">
-                            <!-- 任务显示 -->
-                            <div class="row">
-                                <div class="col-xs-12" >                              
-                                        <div class="well well-lg" style="min-height:200px;border-radius: 4px;padding: 10px 10px;">
-                                        </div>
-                                </div>
+                    <hr style="margin-top: 0">
+                    <!-- 任务显示 -->
+                    <div class="row">
+                        <div class="col-xs-12" >
+                            <div class="well well-lg" style="min-height:200px;border-radius: 4px;padding: 10px 10px;">
                             </div>
+                        </div>
+                    </div>
                 </div></div>
         </div>
 
 
-       <div class="col-xs-2" >
+        <div class="col-xs-2" >
             <div style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8)">
                 <img src="./images/avator.jpg" class="img-circle img-responsive" style="padding: 12 12 12 12 ">
                 <span id="userId"></span>
-            </div> 
+            </div>
             <hr>
             <div>
                 <a href="#" class="list-group-item">我的收藏</a>
@@ -224,29 +224,21 @@
                 window.alert("there are some error");
             }
         });
-        /*$("#submitButton").click(function () {
-            /!*$.ajax({
-                //几个参数需要注意一下
-                type: "POST",//方法类型
-                dataType: "json",//预期服务器返回的数据类型
-                url: "upload.do" ,//url
-                data: $('#form1').serialize(),
-                success: function (result) {
-                    console.log(result);//打印服务端返回的数据(调试用)
-                    if (result.result == true) {
-                        alert("SUCCESS");
-                    }
-                    ;
-                },
-                error : function() {
-                    alert("异常！");
-                }
-            });*!/
-            alert("可以");
-        });*/
         $("#submit0").click(function () {
-            //转url到登录页面
-            alert("pass");
+            /* $.ajax({
+             //几个参数需要注意一下
+             type: "POST",//方法类型
+             dataType: "json",//预期服务器返回的数据类型
+             url: "upload.do" ,//url
+             data:imgData,
+             success: function (result) {
+             console.log(result);//打印服务端返回的数据(调试用)
+             if (result.result == true) {
+             alert("SUCCESS");
+             }*/
+            alert(imgData.type);
+
+
         });
     });
 </script>

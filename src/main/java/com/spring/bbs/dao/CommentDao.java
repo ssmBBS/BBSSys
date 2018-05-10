@@ -29,4 +29,6 @@ public interface CommentDao {
     int selectCount();
     /*获取指定用户所发的Comment*/
     List<Comment> selectByName(@Param("accountName")String accountName);
+    /*获取指定类型的Comment*/
+    List<Comment> selectByType(@Param("type")String type);
 }

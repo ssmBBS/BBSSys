@@ -4,7 +4,7 @@
 
 <mapper namespace="com.spring.bbs.dao.CommentDao">
     <sql id="baseList">
-        id,accountid,pic,likes,commentDate,recentDate,content
+        id,accountid,pic,likes,commentDate,recentDate,content,title,type
     </sql>
     <!--查询所有-->
     <select id="select" resultType="Comment">
@@ -26,7 +26,7 @@
         </where>
     </select>
     <!--插入-->
-    <insert id="insert" parameterType="Comment">
+    <insert id="insert" parameterType="Comment" useGeneratedKeys="true">
         INSERT INTO COMMENT
         (accountid,pic,likes,commentDate,recentDate,content,type,title)
         VALUES (#{accountid},#{pic},#{likes},now(),now(),#{content},#{type},#{title})
@@ -52,6 +52,14 @@
         <include refid="baseList"/>
         FROM Comment
         WHERE accountid =#{accountName}
+        ORDER BY recentDate DESC
+    </select>
+    <!--根据类别搜索-->
+    <select id="selectByType" resultType="Comment" parameterType="java.lang.String">
+        SELECT
+        <include refid="baseList"/>
+        FROM Comment
+        WHERE type =#{type}
         ORDER BY recentDate DESC
     </select>
 </mapper>
