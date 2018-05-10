@@ -31,4 +31,6 @@ public interface CommentDao {
     List<Comment> selectByName(@Param("accountName")String accountName);
     /*获取指定类型的Comment*/
     List<Comment> selectByType(@Param("type")String type);
+    /*获取指定id的comment*/
+    Comment selectById(@Param("id")Integer id);
 }

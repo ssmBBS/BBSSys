@@ -62,4 +62,12 @@
         WHERE type =#{type}
         ORDER BY recentDate DESC
     </select>
+    <!--根据类别搜索-->
+    <select id="selectById" resultType="Comment" parameterType="java.lang.Integer">
+        SELECT
+        <include refid="baseList"/>
+        FROM Comment
+        WHERE id =#{id}
+        ORDER BY recentDate DESC
+    </select>
 </mapper>

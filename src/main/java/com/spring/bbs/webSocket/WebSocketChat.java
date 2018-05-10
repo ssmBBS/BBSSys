@@ -2,6 +2,7 @@ package com.spring.bbs.webSocket;
 
 import com.spring.bbs.entity.Account;
 
+import javax.servlet.http.HttpSession;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;

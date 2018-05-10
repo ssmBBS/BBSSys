@@ -62,12 +62,25 @@ public class indexController {
     session.setAttribute("type",type);
     request.getRequestDispatcher("content.html").forward(request,response);
     }
+    @RequestMapping(value = "/blog")
+    void doContent(@RequestParam("id") Integer id,HttpSession session,HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        session.setAttribute("id",id);
+        request.getRequestDispatcher("content.html").forward(request,response);
+    }
+    @RequestMapping(value = "/getBlogById")
+    @ResponseBody
+    Object doContent(HttpSession session) throws ServletException, IOException {
+        Integer id= (Integer) session.getAttribute("id");
+        Comment comment=commentDao.selectById(id);
+        ResultInfo resultInfo=new ResultInfo();
+        resultInfo.setData(comment);
+        return resultInfo;
+    }
     @RequestMapping(value = "/getContent")
     @ResponseBody
-    Object getContent(HttpSession session){
+    Object getContent(@RequestParam("type") String type){
         ResultInfo resultInfo=new ResultInfo();
         resultInfo.setResult(true);
-        String type= (String) session.getAttribute("type");
         List<Comment>comments=commentDao.selectByType(type);
         resultInfo.setData(comments);
         return resultInfo;

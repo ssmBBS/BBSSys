@@ -1,9 +1,9 @@
 <html>
 <head>
-
     <title>我珈小馆</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Card.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/NavBar.js"></script>
@@ -24,41 +24,39 @@
         }
     </style>
 </head>
-
 <body>
-
-    <div id="myCarousel" data-interval=6000 class="carousel slide" style="position: absolute;z-index: -1">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="./Resource/bg1/bg1.jpg" alt="1 slide">
-            </div>
-            <div class="item">
-                <img src="./Resource/bg1/bg2.jpg" alt="2 slide">
-            </div>
-            <div class="item">
-                <img src="./Resource/bg1/bg3.jpg" alt="3 slide">
-            </div>
-            <div class="item">
-                <img src="./Resource/bg1/bg4.jpg" alt="4 slide">
-            </div>
+<div id="myCarousel" data-interval=6000 class="carousel slide" style="position: absolute;z-index: -1">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="./Resource/bg1/bg1.jpg" alt="1 slide">
         </div>
-        <!-- 轮播（Carousel）导航 -->
+        <div class="item">
+            <img src="./Resource/bg1/bg2.jpg" alt="2 slide">
+        </div>
+        <div class="item">
+            <img src="./Resource/bg1/bg3.jpg" alt="3 slide">
+        </div>
+        <div class="item">
+            <img src="./Resource/bg1/bg4.jpg" alt="4 slide">
+        </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    </a>
+    <!-- 轮播（Carousel）导航 -->
+</div>
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+</a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+</a>
 
 <!--<button id="submit0" name="submit0">提交</button>-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <form id="myform" name="myform" method="post" enctype="multipart/form-data" action="upload.do">
@@ -68,7 +66,6 @@
                 </div>
                 <div class="modal-body">
                     <div class="container" style="width: 100%;">
-
                         <div class="row" style="padding-top:10px;">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -87,14 +84,14 @@
                                     <input type="file" id="pic" name="pic" accept="image/jpeg,image/jpg,image/png," data-delay="150">
                                 </div>
                                 <!-- <div class="form-group">
-                                     &lt;!&ndash;datepicker属性不被火狐浏览器支持&ndash;&gt;
-                                     <label>日期:</label>
-                                     <input type="date"  class="form-control" name="ddl" style="width:200px;" />
-                                 </div>
-                                 <div class="form-group">
-                                     <label>时间:</label>
-                                     <input type="time"  class="form-control" name="time" style="width:200px;" />
-                                 </div>-->
+                                    &lt;!&ndash;datepicker属性不被火狐浏览器支持&ndash;&gt;
+                                    <label>日期:</label>
+                                    <input type="date"  class="form-control" name="ddl" style="width:200px;" />
+                                </div>
+                                <div class="form-group">
+                                    <label>时间:</label>
+                                    <input type="time"  class="form-control" name="time" style="width:200px;" />
+                                </div>-->
                             </div>
                         </div>
                         <div class="row" style="padding-top:10px;">
@@ -105,22 +102,21 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- 任务发布文本框 -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                   <button type="button"  class="btn btn-primary" name="submit0" id="submit0">提交</button>
+                    <button type="button"  class="btn btn-primary" name="submit0" id="submit0">提交</button>
                 </div>
             </form>
         </div>
         <!-- /.modal-content -->
     </div>
     <!-- /.modal -->
-    </div>
+</div>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:5%;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:5%;">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">我珈小馆</a>
@@ -130,7 +126,6 @@
                 <li>
                     <a name= "signUpButton" href="#" onclick="toMain()">首页</a>
                 </li>
-
                 <li>
                     <a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>                </li>
                 <li>
@@ -141,7 +136,6 @@
                 <li>
                     <a>你好，<span id="account"class="glyphicon glyphicon-user"></span></a>
                     <!--
-
                     $("#account").Text();
                     -->
                 </li>
@@ -155,71 +149,96 @@
         </div>
     </div>
     <form name = "nav" action="center.yue" method="post" style="margin-bottom: 0px;"></form>
-    </nav>
+</nav>
 
-    <div class="container" style="padding-top:5%;">
-        <!-- 页面最上部分留空 -->
-        <div class="row" style="max-height:1000px;min-height:800px;">
-
-
-            <div class="col-xs-6 col-xs-offset-2" style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8);">
-                <!-- 任务发布部分 -->
-                <!--模态框按钮-->
-                <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">发布新贴</button>
-                <!-- 任务浏览部分 -->
-                <div style="min-height:800px; max-height:1000px;">
-                        <!-- 导航栏 -->
-                        <div class="row">
-                            <div class="col-xs-7">
-
-                                    <!-- 根据类别查询任务 -->
-                                    <div class="btn-group navbar-form navbar-left"" style="width: 100%">
-                                        <button id="enterprise" class="btn btn-default" name='tasktype' value='entertainment' href="content.do?type=entertainment"><span style="margin-right: 2px" class="glyphicon glyphicon-film"></span><b>娱乐</b></button>
-                                        <button id="life" class="btn btn-default" name = 'tasktype' value="life" href="content.do?type=life"><span style="margin-right: 2px"  class="glyphicon glyphicon-cutlery"></span><b>生活</b></button>
-                                        <button id="learn" class="btn btn-default" name = 'tasktype' value="study" href="content.do?type=study"><span style="margin-right: 2px" class="glyphicon glyphicon-pencil"></span><b>学习</b></button>
-                                    </div>
-
-                            </div>
-                            <div class="col-xs-5">
-                                <form class="navbar-form navbar-left" action="TargetWordSearch.yue" method="post">
-                                    <div class="input-group">
-                                        <input type="text" name="targetword"  class="form-control" placeholder="Search">
-                                        <span class="input-group-btn">
-                                                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="font-size:20px;"></span></button>
-                                                </span>
-                                    </div>
-                                </form>
-                            </div>
+<div class="container" style="padding-top:5%;">
+    <!-- 页面最上部分留空 -->
+    <div class="row" style="max-height:1000px;min-height:800px;">
+        <div class="col-xs-6 col-xs-offset-2" style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8);">
+            <!-- 任务发布部分 -->
+            <!--模态框按钮-->
+            <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">发布新贴</button>
+            <!-- 任务浏览部分 -->
+            <div style="min-height:800px; max-height:1000px;">
+                <!-- 导航栏 -->
+                <div class="row">
+                    <div class="col-xs-7">
+                        <!-- 根据类别查询任务 -->
+                        <div class="btn-group navbar-form navbar-left" style="width: 100%">
+                        <button id="entertainment" class="btn btn-default" name='tasktype' value='entertainment' href="content.do?type=entertainment"><span style="margin-right: 2px" class="glyphicon glyphicon-film"></span><b>娱乐</b></button>
+                        <button id="life" class="btn btn-default" name = 'tasktype' value="life" href="content.do?type=life"><span style="margin-right: 2px"  class="glyphicon glyphicon-cutlery"></span><b>生活</b></button>
+                        <button id="study" class="btn btn-default" name = 'tasktype' value="study" href="content.do?type=study"><span style="margin-right: 2px" class="glyphicon glyphicon-pencil"></span><b>学习</b></button>
+                    </div>
+                </div>
+                <div class="col-xs-5">
+                    <form class="navbar-form navbar-left" action="TargetWordSearch.yue" method="post">
+                        <div class="input-group">
+                            <input type="text" name="targetword"  class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="font-size:20px;"></span></button>
+                                        </span>
                         </div>
+                    </form>
+                </div>
+            </div>
+            <hr style="margin-top: 0">
+            <!-- 任务显示 -->
 
-                        <hr style="margin-top: 0">
-                        <!-- 任务显示 -->
-                        <div class="row">
-                            <div class="col-xs-12" >
-                                <div class="well well-lg" style="min-height:200px;border-radius: 4px;padding: 10px 10px;">
-                                </div>
-                            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12" name="taskDispach" id="taskDispach">
+                    <!--<div class="Question Card">
+                        <h2>《传说之下》这个《undertale》的译名到底好不好？</h2>
+                        <div class="MetaInfo">
+                            <img class="Icon" src="./Resource/head1.jpg">
+                            <span class="User">Isidur</span>
                         </div>
+                        <div class="TextContent">
+                                        <span>看来国内大多数人都接受《传说之下》这个译名，然而游戏里面是有一些“传说”，但和整个剧情关系都不大；如果你硬要说主角的历险是“传说”，而隐藏剧情是“之下”，不但奇怪而且直接剧透了吧？这个译名本身就莫名其妙，有点过度解读的意思，我觉得还不如直译成类似《地城故事》（只是例子）这样的，是不是更好？
+                                        </span>
+                        </div>
+                        <div class="CardFooter">
+                            <span>5/1 17:00</span>
+                            <button class="btn btn-primary  pull-right">进入帖子</button>
+                        </div>
+                    </div>
+
+                    <div class="Question Card">
+                        <h2>收购二手自行车</h2>
+                        <div class="MetaInfo">
+                            <img class="Icon" src="./Resource/head2.jpg">
+                            <span class="User">DogeYoung</span>
+                        </div>
+                        <div class="TextContent">
+                                        <span>有没有人卖二手自行车啊，我想买一辆
+                                        </span>
+                        </div>
+                        <div class="CardFooter">
+                            <span>5/1 18:00</span>
+                            <button class="btn btn-primary  pull-right">进入帖子</button>
+                        </div>
+                    </div>-->
                 </div>
             </div>
 
 
-            <div class="col-xs-2" >
-                <div style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8)">
-                    <img src="./images/avator.jpg" class="img-circle img-responsive" style="padding: 12 12 12 12 ">
-                    <span id="userId"></span>
-                </div>
-                <hr>
-                <div>
-                    <a href="#" class="list-group-item">我的关注</a>
-                    <a href="#" class="list-group-item">我的帖子</a>
-                </div>
-            </div>
 
         </div>
     </div>
-
-
+    <div class="col-xs-2" >
+        <div style="border-radius: 8px; border: 1px solid #CCC;background-color:rgba(255,255,255,0.8)">
+            <img src="./images/avator.jpg" class="img-circle img-responsive" style="padding: 12 12 12 12 ">
+            <span id="userId"></span>
+        </div>
+        <hr>
+        <div>
+            <a href="#" class="list-group-item">我的关注</a>
+            <a href="content.do?type=study" class="list-group-item">我的帖子</a>
+        </div>
+    </div>
+</div>
+</div>
 </body>
 <script>
     $(document).ready(function () {
@@ -245,40 +264,136 @@
             }
         });
         $("#submit0").click(function () {
-           var title=$("#title").val();
-           var text=$("#details").val();
-           var type=$("#type").val();
-           var pic=$("#pic").val();
-           if(title==""||text==""||type==""){
-               alert("信息请填写完整");
-               return;
-           }
-           else {
-               $("#myform").submit();
-           }
+            var title=$("#title").val();
+            var text=$("#details").val();
+            var type=$("#type").val();
+            var pic=$("#pic").val();
+            if(title==""||text==""||type==""){
+                alert("信息请填写完整");
+                return;
+            }
+            else {
+                $("#myform").submit();
+            }
 
-         });
+        });
+        $("#entertainment").click(function () {
+            $.ajax({
+                url: "getContent.do?type=entertainment", /**请求的url*/
+                data:{},
+                type: "get", /**post方式*/
+                dataType: "json", /**数据类型*/
+                beforeSend: function () {
+                    /**登录之前  无法继续再按*/
+                    //$("#loginBtn").enable(false);
+                },
+                /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                success: function (result) {
+                    var data=result.data;
+                    $("#taskDispach").empty();
+                    $.each(data, function(i,val){
+                        var text="<div class='Question Card'><h2>"+val.title
+                            +" </h2><div class='MetaInfo'>"
+                            +"<img class='Icon' src='"+val.pic+"'>"
+                            +"<span class='User'>"+val.accountid+"</span> </div> <div class='TextContent'>"
+                            +"<span>"+val.content+"</span></div>"
+                            +" <div class='CardFooter'><span>已经有"+val.likes+"点赞</span>"
+                                +"<a href=blog.do?id="+val.id+"> <button class='btn btn-primary  pull-right'>进入帖子</button></a>"
+                                +"</div> </div>"
+                        $("#taskDispach").append(text);
+                    });
+                },
+                /**error 出现错误*/
+                error: function () {
+                    window.alert("there are some error");
+                }
+            });
+        });
+        $("#study").click(function () {
+            $.ajax({
+                url: "getContent.do?type=study", /**请求的url*/
+                data:{},
+                type: "get", /**post方式*/
+                dataType: "json", /**数据类型*/
+                beforeSend: function () {
+                    /**登录之前  无法继续再按*/
+                    //$("#loginBtn").enable(false);
+                },
+                /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                success: function (result) {
+                    var data=result.data;
+                    $("#taskDispach").empty();
+                    $.each(data, function(i,val){
+                        var text="<div class='Question Card'><h2>"+val.title
+                            +" </h2><div class='MetaInfo'>"
+                            +"<img class='Icon' src='"+val.pic+"'>"
+                            +"<span class='User'>"+val.accountid+"</span> </div> <div class='TextContent'>"
+                            +"<span>"+val.content+"</span></div>"
+                            +" <div class='CardFooter'><span>已经有"+val.likes+"点赞</span>"
+                            +" <button class='btn btn-primary  pull-right'>进入帖子</button>"
+                            +"</div> </div>"
+                        $("#taskDispach").append(text);
+                    });
+                },
+                /**error 出现错误*/
+                error: function () {
+                    window.alert("there are some error");
+                }
+            });
+        });
+        $("#life").click(function () {
+            $.ajax({
+                url: "getContent.do?type=life", /**请求的url*/
+                data:{},
+                type: "get", /**post方式*/
+                dataType: "json", /**数据类型*/
+                beforeSend: function () {
+                    /**登录之前  无法继续再按*/
+                    //$("#loginBtn").enable(false);
+                },
+                /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                success: function (result) {
+                    var data=result.data;
+                    $("#taskDispach").empty();
+                    $.each(data, function(i,val){
+                        var text="<div class='Question Card'><h2>"+val.title
+                            +" </h2><div class='MetaInfo'>"
+                            +"<img class='Icon' src='"+val.pic+"'>"
+                            +"<span class='User'>"+val.accountid+"</span> </div> <div class='TextContent'>"
+                            +"<span>"+val.content+"</span></div>"
+                            +" <div class='CardFooter'><span>已经有"+val.likes+"点赞</span>"
+                            +" <button class='btn btn-primary  pull-right'>进入帖子</button>"
+                            +"</div> </div>"
+                        $("#taskDispach").append(text);
+                    });
+                },
+                /**error 出现错误*/
+                error: function () {
+                    window.alert("there are some error");
+                }
+            });
+        });
+
     });
 </script>
 <!--<script type="text/javascript">
-    function uploadPic() {
-        // 上传设置
-        Console.log("pass");
-        var options = {
-            // 规定把请求发送到那个URL
-            url: "upload.do",
-            // 请求方式
-            type: "post",
-            // 服务器响应的数据类型
-            dataType: "json",
-            // 请求成功时执行的回调函数
-            success: function(data, status, xhr) {
-                // 图片显示地址
-               alert("1")
-            }
-        };
-
-        $("#form1").ajaxSubmit(options);
-    }
+function uploadPic() {
+// 上传设置
+Console.log("pass");
+var options = {
+// 规定把请求发送到那个URL
+url: "upload.do",
+// 请求方式
+type: "post",
+// 服务器响应的数据类型
+dataType: "json",
+// 请求成功时执行的回调函数
+success: function(data, status, xhr) {
+// 图片显示地址
+alert("1")
+}
+};
+$("#form1").ajaxSubmit(options);
+}
 </script>-->
 </html>
