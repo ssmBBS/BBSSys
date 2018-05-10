@@ -362,8 +362,8 @@
                             +"<span class='User'>"+val.accountid+"</span> </div> <div class='TextContent'>"
                             +"<span>"+val.content+"</span></div>"
                             +" <div class='CardFooter'><span>已经有"+val.likes+"点赞</span>"
-                            +" <button class='btn btn-primary  pull-right'>进入帖子</button>"
-                            +"</div> </div>"
+                            +"<a href='blog.do?id="+val.id+"'><button class='btn btn-primary  pull-right'>进入帖子</button></a> "
+                            +"</div></div>"
                         $("#taskDispach").append(text);
                     });
                 },

@@ -112,6 +112,7 @@
 <div class="container" style="padding-top: 3%">
 	<div class="row" >
 		<div class="col-xs-6 col-xs-offset-3" name="DisplayArea">
+			<div id="blog"></div>
 			<!--<div class="Question Card">
                 <h2>《传说之下》这个《undertale》的译名到底好不好？</h2>
                 <div class="MetaInfo">
@@ -195,8 +196,7 @@
             },
             /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
             success: function (result) {
-                var data=result.data;
-                $.each(data, function(i,val){
+                var val=result.data;
                     var txt1=" <div class='Answer Card'>" +
                         "<div class='MetaInfo'> <img class='Icon' src='"
                         +val.pic+"'>"
@@ -217,9 +217,7 @@
                         +" <button class='btn btn-primary  pull-right'>回复</button>"
                         +"</div> </div>";
                     // 以 HTML 创建新元素
-                    document.getElementsByName("DisplayArea").append(txt1);
-//                            	$("body").append(txt1);
-                });
+                    $("#blog").append(txt1);
             },
             /**error 出现错误*/
             error: function () {
