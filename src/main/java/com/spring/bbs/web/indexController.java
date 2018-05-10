@@ -67,6 +67,16 @@ public class indexController {
         session.setAttribute("id",id);
         request.getRequestDispatcher("content.html").forward(request,response);
     }
+    /*查看我发的帖子*/
+    @RequestMapping(value = "/myBlog")
+    @ResponseBody
+    Object myBlog(HttpSession session) {
+       Account account= (Account) session.getAttribute("account");
+       ResultInfo resultInfo=new ResultInfo();
+       List<Comment>comments=commentDao.selectByName(account.getAccountName());
+       resultInfo.setData(comments);
+       return resultInfo;
+    }
     @RequestMapping(value = "/getBlogById")
     @ResponseBody
     Object doContent(HttpSession session) throws ServletException, IOException {
