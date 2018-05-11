@@ -89,7 +89,6 @@ public class indexController {
         ResultInfo resultInfo=new ResultInfo();
         List<Discuss>discusses=discussDao.selectById(id);
         resultInfo.setData(discusses);
-        Comment comment=commentDao.selectById(id);
         Account account= (Account) session.getAttribute("account");
         resultInfo.setReason(account.getAccountName());
         return resultInfo;
@@ -112,6 +111,7 @@ public class indexController {
         Discuss discuss=new Discuss(account.getAccountName(),id,content);
         discussDao.insert(discuss);
         resultInfo.setResult(true);
+        resultInfo.setData(discuss);
         return resultInfo;
     }
     @RequestMapping(value = "/getContent")

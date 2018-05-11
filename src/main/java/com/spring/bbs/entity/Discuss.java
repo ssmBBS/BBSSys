@@ -10,45 +10,45 @@ import java.util.Date;
  */
 public class Discuss {
     /**用户的id*/
-    private String accountId;
+    private String accountid;
     /**说说的id*/
-    private Integer commentId;
+    private Integer commentid;
     /**回复的内容*/
     private String content;
     /**回复对应的序列号 在该说说中的序列*/
     //unnecessary, order by time desc
-    //private Integer serialNo;
+    //private integer serialNo;
     /**回复的时间*/
     private Date createTime;
 
-    public Discuss(String accountId, Integer commentId, String content){
-        this.accountId = accountId;
-        this.commentId = commentId;
+    public Discuss(String accountid, Integer commentid, String content){
+        this.accountid = accountid;
+        this.commentid = commentid;
         this.content = content;
         this.createTime=new Date();
     }
 
-    public Discuss(String accountId, Integer commentId, String content, Date createTime) {
-        this.accountId = accountId;
-        this.commentId = commentId;
+    public Discuss(String accountid, Integer commentid, String content, Date createTime) {
+        this.accountid = accountid;
+        this.commentid = commentid;
         this.content = content;
         this.createTime = createTime;
     }
 
-    public String getAccountId() {
-        return accountId;
+    public String getAccountid() {
+        return accountid;
     }
 
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
+    public void setAccountid(String accountid) {
+        this.accountid = accountid;
     }
 
-    public Integer getCommentId() {
-        return commentId;
+    public Integer getCommentid() {
+        return commentid;
     }
 
-    public void setCommentId(Integer commentId) {
-        this.commentId = commentId;
+    public void setCommentid(Integer commentid) {
+        this.commentid = commentid;
     }
 
     public String getContent() {
@@ -59,11 +59,11 @@ public class Discuss {
         this.content = content;
     }
 
-//    public Integer getSerialNo() {
+//    public integer getSerialNo() {
 //        return serialNo;
 //    }
 //
-//    public void setSerialNo(Integer serialNo) {
+//    public void setSerialNo(integer serialNo) {
 //        this.serialNo = serialNo;
 //    }
 

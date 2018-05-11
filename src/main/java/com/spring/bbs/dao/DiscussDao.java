@@ -20,7 +20,7 @@ public interface DiscussDao {
      * @param id comment的id
      * @return
      */
-    List<Discuss> select(Integer id);
+
 
     /**
      * 通过commentId 和 serialId 删除discuss
@@ -35,13 +35,6 @@ public interface DiscussDao {
     void insert(Discuss discuss);
 
     //没有更改功能
-
-    /**
-     * 获取当前comment最大的楼层数目
-     * @param commentId
-     * @return
-     */
-    Integer selectCount(@Param("commentId") Integer commentId);
     /*获得指定id的comments*/
     List<Discuss>selectById(@Param("commentid")Integer commentid);
 

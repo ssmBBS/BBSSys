@@ -244,14 +244,17 @@
                 var txt1="<div class='Question Card'><h2>"+val.title+"</h2>"
 					+"<div class='MetaInfo'> <img class='Icon' src='"+val.pic+"'>"
 						+"<span class='User'>"+account+"</span>"
-						+" <button id='replayTest' class='btn btn-info  pull-right'>+关注</button>"
+						+"  <button class='btn btn-info  pull-right'>+关注</button>"
 						+"</div> <div class='TextContent'>"
 						+"<span>"+val.content+"</span>"
-						+"</div> <div class='CardFooter'> <span>已经有"+val.likes+"点赞</span> <div class='Reply' id='Reply' style='display:none;'>"
-						+" <form role='form'> <div class='form-group'> <label for='name'>回复</label> <textarea id='returnContent' name='returnContent' class='form-control' rows='3'></textarea> </div>"
-						+" </form> <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none'\">取消</button> </div>"
-						+" <button id='replay' class='btn btn-primary  pull-right' onclick=\"this.previousSibling.previousSibling.style.display='block'\">回复</button> </div> </div>";
-				$("#blog").append(txt1);
+						+"</div><div class='CardFooter'> <span>已经有"+val.likes+"点赞</span>"
+						+" <div class='Reply' id='Reply' style='display:none;'>"
+                   		+"<form role='form'> <div class='form-group'><label for='name'>回复</label>"
+						+"<textarea id='returnContent' class='form-control' rows='3'></textarea>"
+						+"</div> </form> <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none';this.parentNode.nextSibling.style.display='block'\">取消</button> <button id='replayContent' class='btn btn-primary  pull-right' onclick='addDiscuss()'>回复</button> </div>"
+                    	+"<button class='btn btn-primary  pull-right' onclick=\"this.previousSibling.style.display='block';this.style.display='none';\">回复</button>"
+                   	 	+"</div></div>";
+                $("#blog").append(txt1);
             },
             /**error 出现错误*/
             error: function () {
@@ -272,85 +275,65 @@
                 var data=result.data;
                 $.each(data, function(i,val){
                     var txt1=" <div class='Answer Card'><div class='MetaInfo'>"
-                        +" <span class='User'>"+val.accountId+"</span>"
-                        +"<span>回复</span> <span class='User'>"+account+"</span>"
+                        +" <span class='User'>"+val.accountid+"</span>"
+                        +"<span>回复</span>"
                         +" <button class='btn btn-info  pull-right'>+关注</button>"
                         +"</div> <div class='TextContent'>"
                         +"<span>"+val.content+"</span> </div>"
                         +"  <div class='CardFooter'> <span></span> <div class='Reply' id='Reply' style='display:none;'>"
                         +"  <form role='form'> <div class='form-group'>  <textarea class='form-control' rows='3'></textarea> </div> </form>"
-                        +"  <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none'\">取消</button> </div> <button class='btn btn-primary  pull-right' onclick=\"this.previousSibling.previousSibling.style.display='block'\">回复</button> </div> </div>";
+                        +"</div></div></div>";
                     $("#answer").append(txt1);
-				});
+                });
             },
             /**error 出现错误*/
             error: function () {
                 alert("there are some error");
             }
         });
-		$("#replayTest").click(function () {
-			var content=$("#returnContent").val();
-			if(content==""){
-			    alert("请输入回复的内容");
-			    return;
-			}else {
-                $.ajax({
-                    url: "addDiscuss.do", /**请求的url*/
-                    data:{content:content},
-                    type: "get",
-                    dataType: "json", /**数据类型*/
-                    beforeSend: function () {
-                        /**登录之前  无法继续再按*/
-                        //$("#loginBtn").enable(false);
-                    },
-                    /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
-                    success: function (result) {
-                      if(result.result==true){
-                          alert("回复成功");
-                          $("#returnContent").val("");
-                          $.ajax({
-                              url: "getDisicuss.do", /**请求的url*/
-                              data:{},
-                              type: "get",
-                              dataType: "json", /**数据类型*/
-                              beforeSend: function () {
-                                  /**登录之前  无法继续再按*/
-                                  //$("#loginBtn").enable(false);
-                              },
-                              /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
-                              success: function (result) {
-                                  var data=result.data;
-                                  $("#answer").empty();
-                                  $.each(data, function(i,val){
-                                      var txt1=" <div class='Answer Card'><div class='MetaInfo'>"
-                                          +" <span class='User'>"+val.accountId+"</span>"
-                                          +"<span>回复</span> <span class='User'>"+account+"</span>"
-                                          +" <button class='btn btn-info  pull-right'>+关注</button>"
-                                          +"</div> <div class='TextContent'>"
-                                          +"<span>"+val.content+"</span> </div>"
-                                          +"  <div class='CardFooter'> <span></span> <div class='Reply' id='Reply' style='display:none;'>"
-                                          +"  <form role='form'> <div class='form-group'>  <textarea class='form-control' rows='3'></textarea> </div> </form>"
-                                          +"  <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none'\">取消</button> </div> <button class='btn btn-primary  pull-right' onclick=\"this.previousSibling.previousSibling.style.display='block'\">回复</button> </div> </div>";
-                                      $("#answer").append(txt1);
-                                  });
-                              },
-                              /**error 出现错误*/
-                              error: function () {
-                                  alert("there are some error");
-                              }
-                          });
-                      }
-                      else {
-                          alert("回复失败");
-					  }
-                    },
-                    /**error 出现错误*/
-                    error: function () {
-                        alert("there are some error");
-                    }
-                });
-			}
-        })
     });
+    function addDiscuss() {
+        var content=$("#returnContent").val();
+		if(content==""){
+		 alert("请输入回复的内容");
+		 return;
+		 }else {
+		 $.ajax({
+		 url: "addDiscuss.do", /**请求的url*/
+		 data:{content:content},
+		 type: "get",
+		 dataType: "json", /**数据类型*/
+		 beforeSend: function () {
+		 /**登录之前  无法继续再按*/
+		 //$("#loginBtn").enable(false);
+		 },
+		 /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+		 success: function (result) {
+		 if(result.result==true){
+		 alert("回复成功");
+		 var val=result.data;
+		 $("#returnContent").val("");
+             var txt1=" <div class='Answer Card'><div class='MetaInfo'>"
+                 +" <span class='User'>"+val.accountid+"</span>"
+                 +"<span>回复</span>"
+                 +" <button class='btn btn-info  pull-right'>+关注</button>"
+                 +"</div> <div class='TextContent'>"
+                 +"<span>"+val.content+"</span> </div>"
+                 +"  <div class='CardFooter'> <span></span> <div class='Reply' id='Reply' style='display:none;'>"
+                 +"  <form role='form'> <div class='form-group'>  <textarea class='form-control' rows='3'></textarea> </div> </form>"
+                 +"</div></div></div>";
+             $("#answer").append(txt1);
+		 }
+		 else {
+		 alert("回复失败");
+		 }
+		 },
+		 /**error 出现错误*/
+		 error: function () {
+		 alert("there are some error");
+		 }
+		 });
+		 }
+    }
 </script>
 </html>

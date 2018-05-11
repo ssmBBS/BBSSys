@@ -10,37 +10,16 @@
 
     <!--根据comment的id 获取 result
     根据时间升序显示-->
-    <select id="select" parameterType="java.lang.Integer">
+    <select id="selectById" parameterType="java.lang.Integer" resultType="com.spring.bbs.entity.Discuss">
       SELECT
-      <include refid="baseList"/>
-        FROM discuss
-        ORDER BY createTime
-    </select>
-    <select id="selectById" parameterType="java.lang.Integer" resultType="Discuss">
-        SELECT
-        <include refid="baseList"/>
+        accountid,commentid,content
         FROM discuss
         WHERE commentid= #{commentid}
-        ORDER BY createTime
     </select>
 
     <!--插入-->
     <insert id="insert" parameterType="Discuss">
         INSERT INTO discuss
-        VALUES (#{accountid},#{commentid},#{content},now())
+        VALUES (#{accountid},#{commentid},#{content},#{createTime})
     </insert>
-
-    <!--删除-->
-    <delete id="delete" parameterType="Discuss">
-        DELETE FROM discuss
-        WHERE accountid = #{accountid}
-        AND commentid = #{commentid}
-    </delete>
-    
-    <!--count 数目,输入commentId-->
-    <select id="selectCount" parameterType="java.lang.Integer">
-        SELECT count(*)
-        FROM discuss
-        WHERE commentid = #{commentId}
-    </select>
 </mapper>
