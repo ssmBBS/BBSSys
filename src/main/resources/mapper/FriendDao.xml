@@ -19,4 +19,9 @@
         INSERT INTO friendrelation
         VALUES (#{account1id},#{account2id})
     </insert>
+    <!--插入-->
+    <insert id="insertByName" parameterType="java.lang.String">
+        INSERT INTO friendrelation
+        VALUES (#{account1id},#{account2id})
+    </insert>
 </mapper>

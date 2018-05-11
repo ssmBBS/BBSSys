@@ -12,4 +12,5 @@ import java.util.List;
 public interface FriendDao {
     List<FriendRelation>selectByName(@Param("accountid")String accountid);
     void insert(FriendRelation friendRelation);
+    void insertByName(@Param("account1id")String accountName,@Param("account2id")String friendName);
 }
