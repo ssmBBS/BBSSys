@@ -1,7 +1,90 @@
 <!DOCTYPE html>
+<!--<html>-->
+<!--<head>-->
+    <!--<title>char room</title>-->
+    <!--<script type="application/javascript">-->
+        <!--//创建对象-->
+        <!--var Chat=new Object();-->
+        <!--Chat.socket=null;-->
+        <!--//判断是否支持websocket-->
+        <!--Chat.connect=function (host) {-->
+            <!--if ('WebSocket' in window) {-->
+                <!--Chat.socket = new WebSocket(host);-->
+            <!--}-->
+            <!--else {-->
+                <!--Console.log('is not support');-->
+                <!--return;-->
+            <!--}-->
+            <!--Chat.socket.onopen = function () {-->
+                <!--Console.log('Info:WebSocket connection opened');-->
+                <!--//用户按下一个键盘按键时会触发onkeydown事件-->
+                <!--document.getElementById('chat').onkeydown = function (event) {-->
+                    <!--if (event.keyCode == 13) {-->
+                        <!--Chat.sendMessage();-->
+                    <!--}-->
+                <!--};-->
+            <!--};-->
+            <!--//链接关闭时触发onclose事件-->
+            <!--Chat.socket.onclose = function () {-->
+                <!--document.getElementById('chat').onkeydown = null;-->
+                <!--Console.log('Info:WebSocket closed');-->
+            <!--};-->
+            <!--//收到服务器端发来的信息后触发message-->
+            <!--Chat.socket.onmessage = function (message) {-->
+                <!--alert('Somebody send message')-->
+                <!--Console.log(message.data);-->
+            <!--};-->
+        <!--};-->
+        <!--//初始化-->
+        <!--Chat.initialize=function () {-->
+            <!--Chat.connect('ws://localhost:8080/Chat');-->
+        <!--};-->
+        <!--//发送数据-->
+        <!--Chat.sendMessage=function () {-->
+            <!--var message=document.getElementById('name').value;-->
+            <!--message+="say: "+document.getElementById('chat').value;-->
+            <!--if(message!=''&&document.getElementById('name').value!=''){-->
+                <!--//将信息发送给服务器端-->
+                <!--Chat.socket.send(message);-->
+                <!--//清空-->
+                <!--document.getElementById('chat').value='';-->
+            <!--}-->
+        <!--};-->
+        <!--var Console=new Object();-->
+        <!--Console.log=function (message) {-->
+            <!--var console=document.getElementById('console');-->
+            <!--var p=document.createElement('p');-->
+            <!--p.style.wordWrap='break-word';-->
+            <!--p.innerHTML=message;-->
+            <!--console.appendChild(p);-->
+            <!--while (console.child){-->
+                <!--console.removeChild(console.firstChild);-->
+            <!--}-->
+            <!--console.scrollTop=console.scrollHeight;-->
+        <!--};-->
+        <!--Chat.initialize();-->
+    <!--</script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+    <!--<p>-->
+        <!--name:<input type="text" id="name" placeholder="input name"/>-->
+    <!--</p>-->
+    <!--<p>-->
+        <!--<input type="text" placeholder="input content" id="chat"/>-->
+    <!--</p>-->
+    <!--<div id="console-container">-->
+        <!--<div id="console"></div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
 <html>
 <head>
-    <title>char room</title>
+    <title>我珈小馆</title>
     <script type="application/javascript">
         //创建对象
         var Chat=new Object();
@@ -16,10 +99,11 @@
                 return;
             }
             Chat.socket.onopen = function () {
-                Console.log('Info:WebSocket connection opened');
+                // Console.log('Info:WebSocket connection opened');
+                alert('Info:WebSocket connection opened');
                 //用户按下一个键盘按键时会触发onkeydown事件
                 document.getElementById('chat').onkeydown = function (event) {
-                    if (event.keyCode == 13) {
+                    if (event.keyCode === 13) {
                         Chat.sendMessage();
                     }
                 };
@@ -31,7 +115,11 @@
             };
             //收到服务器端发来的信息后触发message
             Chat.socket.onmessage = function (message) {
-                alert('Somebody send message')
+                alert('Somebody send message');
+                Console.log(message.data);
+            };
+            Chat.socket.onerror = function (message) {
+                alert('error!!');
                 Console.log(message.data);
             };
         };
@@ -43,7 +131,7 @@
         Chat.sendMessage=function () {
             var message=document.getElementById('name').value;
             message+="say: "+document.getElementById('chat').value;
-            if(message!=''&&document.getElementById('name').value!=''){
+            if(message!==''&&document.getElementById('name').value!==''){
                 //将信息发送给服务器端
                 Chat.socket.send(message);
                 //清空
@@ -52,30 +140,180 @@
         };
         var Console=new Object();
         Console.log=function (message) {
-            var console=document.getElementById('console');
+            var console=document.getElementById('MsgBoard');
+
+            var messageFrame=document.createElement("div");
+            var icon=document.createElement("img");
+            var user=document.createElement("span");
+
+            var textContent=document.createElement("div");
+
+            // var p=document.createElement('span');
             var p=document.createElement('p');
+
+            var arr=message.split("say: ");
+
+            messageFrame.setAttribute('class', 'MessageFrame');
+
+            icon.setAttribute("class", "Icon");
+            icon.src = "./Resource/head2.jpg";
+
+            user.setAttribute("class", "User");
+            user.innerHTML = arr[0];
+            textContent.setAttribute('class', 'TextContent');
+
             p.style.wordWrap='break-word';
-            p.innerHTML=message;
-            console.appendChild(p);
+            p.innerHTML=arr[1];
+
+            messageFrame.appendChild(icon);
+            messageFrame.appendChild(user);
+            textContent.appendChild(p);
+            messageFrame.appendChild(textContent);
+
+
+
+            console.appendChild(messageFrame);
             while (console.child){
                 console.removeChild(console.firstChild);
             }
             console.scrollTop=console.scrollHeight;
-        }
+        };
         Chat.initialize();
     </script>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/NavBar.js"></script>
+    <style type="text/css">
+        body{
+            font-family: Microsoft YaHei;
+        }
+        .MessagesBoard{
+            background: #fff;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(26,26,26,.1);
+            box-sizing: border-box;
+            padding: 12px 16px;
+            background: #fff;
+        }
+        .MessageFrame{
+            padding: 5 10;
+        }
+        .Icon{
+            height: 30px;
+            width: 30px;
+            margin: 0 10;
+        }
+        .User{
+            font-size: 18px;
+        }
+        .TextContent{
+            padding: 8 10;
+            font-size: 16px;
+        }
+        .CardFooter{
+            padding: 10 0;
+        }
+        .MetaInfo{
+        }
+    </style>
 </head>
 <body>
-<div>
+<div id="myCarousel" data-interval=6000 class="carousel slide" style="position: absolute;z-index: -1">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="./Resource/bg1/bg1.jpg" alt="1 slide">
+        </div>
+        <div class="item">
+            <img src="./Resource/bg1/bg2.jpg" alt="2 slide">
+        </div>
+        <div class="item">
+            <img src="./Resource/bg1/bg3.jpg" alt="3 slide">
+        </div>
+        <div class="item">
+            <img src="./Resource/bg1/bg4.jpg" alt="4 slide">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+</div>
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+</a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+</a>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:5%;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">我珈小馆</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toMain()">首页</a>
+                </li>
+
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>
+                </li>
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toFriends()">好友</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a>你好，<span id="account"class="glyphicon glyphicon-user"></span></a>
+                    <!--
+                    $("#account").Text();
+                    -->
+                </li>
+                <li>
+                    <a name= "signUpButton" href="#" onclick="toMessage()"><span class="glyphicon glyphicon-bell"></span>消息</a>
+                </li>
+                <li>
+                    <a name= "signUpButton" href="outLogin.do">退出登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" style="padding-top: 3%">
+    <div class="row" >
+        <div class="col-xs-6 col-xs-offset-3">
+            <div id="MsgBoard" class="MessagesBoard">
+                <div class="MessageFrame">
+                    <img class="Icon" src="./Resource/head2.jpg">
+                    <span class="User">DogeYoung</span>
+                    <div class="TextContent">
+                        <span>花Q花Q花Q花Q花Q花Q花Q花Q</span>
+                    </div>
+                </div>
+                <div class="MessageFrame">
+                    <img class="Icon" src="./Resource/head3.jpg">
+                    <span class="User">Iray</span>
+                    <div class="TextContent">
+                        <span>嗨多磨嗨多磨嗨多磨嗨多磨</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <p>
         name:<input type="text" id="name" placeholder="input name"/>
     </p>
     <p>
         <input type="text" placeholder="input content" id="chat"/>
     </p>
-    <div id="console-container">
-        <div id="console"></div>
-    </div>
 </div>
+
 </body>
 </html>
