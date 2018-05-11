@@ -14,7 +14,6 @@
 			width: 100%;
 		}
 		.Card{
-			margin-bottom: 10px;
 			background: #fff;
 			overflow: hidden;
 			border-radius: 2px;
@@ -23,6 +22,7 @@
 			padding: 12px 16px;
 			background: #fff;
 			box-shadow: 0 1px 3px rgba(26,26,26,.1);
+			margin: 0 0 10 0;
 		}
 		.Icon{
 			height: 50px;
@@ -42,9 +42,14 @@
 		}
 		.MetaInfo{
 		}
+		.btn{
+			margin: 0 4;
+		}
 	</style>
+
 </head>
 <body>
+
 <div id="myCarousel" data-interval=6000 class="carousel slide" style="position: absolute;z-index: -1">
 	<ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -74,6 +79,7 @@
 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
 	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 </a>
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:5%;">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -82,13 +88,14 @@
 		<div>
 			<ul class="nav navbar-nav navbar-left">
 				<li>
-					<a name= "signUpButton" href="#" onclick="toMain()">首页</a>
+					<a name= "signUpButton" href="mainPage.html" onclick="toMain()">首页</a>
 				</li>
 
 				<li>
-					<a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>                </li>
+					<!--<a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>-->
+				</li>
 				<li>
-					<a name= "signUpButton" href="#" onclick="toFriends()">好友</a>
+					<!--<a name= "signUpButton" href="#" onclick="toFriends()">好友</a>-->
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -111,80 +118,116 @@
 
 <div class="container" style="padding-top: 3%">
 	<div class="row" >
-		<div class="col-xs-6 col-xs-offset-3" name="DisplayArea">
+		<div class="col-xs-6 col-xs-offset-3">
 			<div id="blog"></div>
+			<div id="answer"></div>
 			<!--<div class="Question Card">
-                <h2>《传说之下》这个《undertale》的译名到底好不好？</h2>
-                <div class="MetaInfo">
-                    <img class="Icon" src="./Resource/head1.jpg">
-                    <span class="User">Isidur</span>
-                    <button class="btn btn-info  pull-right">+关注</button>
-                </div>
-                <div class="TextContent">
-                    <span>看来国内大多数人都接受《传说之下》这个译名，然而游戏里面是有一些“传说”，但和整个剧情关系都不大；如果你硬要说主角的历险是“传说”，而隐藏剧情是“之下”，不但奇怪而且直接剧透了吧？这个译名本身就莫名其妙，有点过度解读的意思，我觉得还不如直译成类似《地城故事》（只是例子）这样的，是不是更好？</span>
-                </div>
-                <div class="CardFooter">
-                    <span>5/1 17:00</span>
-                    <button class="btn btn-primary  pull-right">回复</button>
-                </div>
-            </div>
+				<h2>《传说之下》这个《undertale》的译名到底好不好？</h2>
+				<div class="MetaInfo">
+					<img class="Icon" src="./Resource/head1.jpg">
+					<span class="User">Isidur</span>
+					<button class="btn btn-info  pull-right">+关注</button>
+				</div>
+				<div class="TextContent">
+					<span>看来国内大多数人都接受《传说之下》这个译名，然而游戏里面是有一些“传说”，但和整个剧情关系都不大；如果你硬要说主角的历险是“传说”，而隐藏剧情是“之下”，不但奇怪而且直接剧透了吧？这个译名本身就莫名其妙，有点过度解读的意思，我觉得还不如直译成类似《地城故事》（只是例子）这样的，是不是更好？</span>
+				</div>
+				<div class="CardFooter">
+					<span>5/1 17:00</span>
+					<div class='Reply' id="Reply" style="display:none;">
+						<form role='form'>
+							<div class='form-group'>
+								<label for='name'>回复</label>
+								<textarea class='form-control' rows='3'></textarea>
+							</div>
+						</form>
+						<button class='btn btn-primary pull-right' onclick="this.parentNode.style.display='none'">取消</button>
+					</div>
+					<button class="btn btn-primary  pull-right" onclick="this.previousSibling.previousSibling.style.display='block'">回复</button>
+				</div>
+			</div>
+			<div class="Answer Card">
+				<div class="MetaInfo">
+					<img class="Icon" src="./Resource/head2.jpg">
+					<span class="User">DogeYoung</span>
+					<span>回复</span>
+					<span class="User">Isidur</span>
+					<button class="btn btn-info  pull-right">+关注</button>
+				</div>
+				<div class="TextContent">
+					<span>索尼平台上有一个RPG系列，叫《WILD ARMS》。你可以理解为幻想世界的《荒野大镖客》。国内就直译为《荒野兵器》了。然后游戏发售了，大家一玩，根本不是那么回事。ARM不是兵器的意思，而是Alte Ratselhaft Machine（古代遗迹机械），这下高玩们脸上挂不住了，赶快改口叫《荒野的古代遗迹之机械》，利用一切渠道向大家普及正确的译名，电电的攻略期刊专门提过这事。现在帮任天堂推广宝可梦和森喜刚这些二逼译名的人，好歹还属于商业行为。当年WA的译名警察可完全是自发的，当然也有在小白们面前刷优越感的意思。</span>
+				</div>
+				<div class="CardFooter">
+					<span>5/1 17:00</span>
+					<div class='Reply' id="Reply" style="display:none;">
+						<form role='form'>
+							<div class='form-group'>
+								<label for='name'>回复</label>
+								<textarea class='form-control' rows='3'></textarea>
+							</div>
+						</form>
+						<button class='btn btn-primary pull-right' onclick="this.parentNode.style.display='none'">取消</button>
+					</div>
+					<button class="btn btn-primary  pull-right" onclick="this.previousSibling.previousSibling.style.display='block'">回复</button>
+				</div>
+			</div>
+			<div class="Answer Card">
+				<div class="MetaInfo">
+					<img class="Icon" src="./Resource/head3.jpg">
+					<span class="User">Iray</span>
+					<span>回复</span>
+					<span class="User">DogeYoung</span>
+					<button class="btn btn-info  pull-right">+关注</button>
+				</div>
+				<div class="TextContent">
+					<span>我是臭海豹，来打我</span>
+				</div>
+				<div class="CardFooter">
+					<span>5/1 17:00</span>
+					<div class='Reply' id="Reply" style="display:none;">
+						<form role='form'>
+							<div class='form-group'>
+								<label for='name'>回复</label>
+								<textarea class='form-control' rows='3'></textarea>
+							</div>
+						</form>
+						<button class='btn btn-primary pull-right' onclick="this.parentNode.style.display='none'">取消</button>
+					</div>
+					<button class="btn btn-primary  pull-right" onclick="this.previousSibling.previousSibling.style.display='block'">回复</button>
+				</div>
+			</div>
+			<div class="Answer Card">
+				<div class="MetaInfo">
+					<img class="Icon" src="./Resource/head2.jpg">
+					<span class="User">DogeYoung</span>
+					<span>回复</span>
+					<span class="User">Iray</span>
+					<button class="btn btn-info  pull-right">+关注</button>
+				</div>
+				<div class="TextContent">
+					<span>老子打死你个海豹</span>
+				</div>
+				<div class="CardFooter">
+					<span>5/1 17:00</span>
+					<div class='Reply' id="Reply" style="display:none;">
+						<form role='form'>
+							<div class='form-group'>
+								<label for='name'>回复</label>
+								<textarea class='form-control' rows='3'></textarea>
+							</div>
+						</form>
+						<button class='btn btn-primary pull-right' onclick="this.parentNode.style.display='none'">取消</button>
+					</div>
+					<button class="btn btn-primary  pull-right" onclick="this.previousSibling.previousSibling.style.display='block'">回复</button>
+				</div>
+			</div>-->
 
-            <div class="Answer Card">
-                <div class="MetaInfo">
-                    <img class="Icon" src="./Resource/head2.jpg">
-                    <span class="User">DogeYoung</span>
-                    <span>回复</span>
-                    <span class="User">Isidur</span>
-                    <button class="btn btn-info  pull-right">+关注</button>
-                </div>
-                <div class="TextContent">
-                    <span>索尼平台上有一个RPG系列，叫《WILD ARMS》。你可以理解为幻想世界的《荒野大镖客》。国内就直译为《荒野兵器》了。然后游戏发售了，大家一玩，根本不是那么回事。ARM不是兵器的意思，而是Alte Ratselhaft Machine（古代遗迹机械），这下高玩们脸上挂不住了，赶快改口叫《荒野的古代遗迹之机械》，利用一切渠道向大家普及正确的译名，电电的攻略期刊专门提过这事。现在帮任天堂推广宝可梦和森喜刚这些二逼译名的人，好歹还属于商业行为。当年WA的译名警察可完全是自发的，当然也有在小白们面前刷优越感的意思。</span>
-                </div>
-                <div class="CardFooter">
-                    <span>5/1 17:00</span>
-                    <button class="btn btn-primary  pull-right">回复</button>
-                </div>
-            </div>
-            <div class="Answer Card">
-                <div class="MetaInfo">
-                    <img class="Icon" src="./Resource/head3.jpg">
-                    <span class="User">Iray</span>
-                    <span>回复</span>
-                    <span class="User">DogeYoung</span>
-                    <button class="btn btn-info  pull-right">+关注</button>
-                </div>
-                <div class="TextContent">
-                    <span>我是臭海豹，来打我</span>
-                </div>
-                <div class="CardFooter">
-                    <span>5/1 17:00</span>
-                    <button class="btn btn-primary  pull-right">回复</button>
-                </div>
-            </div>
-
-            <div class="Answer Card">
-                <div class="MetaInfo">
-                    <img class="Icon" src="./Resource/head2.jpg">
-                    <span class="User">DogeYoung</span>
-                    <span>回复</span>
-                    <span class="User">Iray</span>
-                    <button class="btn btn-info  pull-right">+关注</button>
-                </div>
-                <div class="TextContent">
-                    <span>老子打死你个海豹</span>
-                </div>
-                <div class="CardFooter">
-                    <span>5/1 18:00</span>
-                    <button class="btn btn-primary  pull-right">回复</button>
-                </div>
-            </div>	-->
 		</div>
 	</div>
 </div>
-<div id="content"></div>
 </body>
 <script>
     $(document).ready(function () {
+        var account;
         $.ajax({
             url: "getBlogById.do", /**请求的url*/
             data:{},
@@ -197,32 +240,116 @@
             /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
             success: function (result) {
                 var val=result.data;
-                    var txt1=" <div class='Answer Card'>" +
-                        "<div class='MetaInfo'> <img class='Icon' src='"
-                        +val.pic+"'>"
-                        +"<span class='User'>"+val.accountid
-                        +"</span><button class='btn btn-info  pull-right'>+关注</button>"
-                        +" </div><div class='TextContent'>"
-                        +"<span>"+val.content+"</span>"
-                        +"</div> <div class='CardFooter'>"
-                        +"<span>"+val.commentDate+"</span>"
-                        +"<div class='Reply' id='Reply' style='display:none;'>"
-                        +"<form role='form'>"
-                        +"<div class='form-group'>"
-                        +"<textarea class='form-control' rows='3'></textarea>"
-                        +"</div>"
-                        +"</form>"
-                        +"<button class='btn btn-primary pull-right' onclick='this.parentNode.style.display='none''>取消</button>"
-                        +"</div>"
-                        +" <button class='btn btn-primary  pull-right'>回复</button>"
-                        +"</div> </div>";
-                    // 以 HTML 创建新元素
-                    $("#blog").append(txt1);
+                account=val.accountid;
+                var txt1="<div class='Question Card'><h2>"+val.title+"</h2>"
+					+"<div class='MetaInfo'> <img class='Icon' src='"+val.pic+"'>"
+						+"<span class='User'>"+account+"</span>"
+						+" <button id='replayTest' class='btn btn-info  pull-right'>+关注</button>"
+						+"</div> <div class='TextContent'>"
+						+"<span>"+val.content+"</span>"
+						+"</div> <div class='CardFooter'> <span>已经有"+val.likes+"点赞</span> <div class='Reply' id='Reply' style='display:none;'>"
+						+" <form role='form'> <div class='form-group'> <label for='name'>回复</label> <textarea id='returnContent' name='returnContent' class='form-control' rows='3'></textarea> </div>"
+						+" </form> <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none'\">取消</button> </div>"
+						+" <button id='replay' class='btn btn-primary  pull-right' onclick=\"this.previousSibling.previousSibling.style.display='block'\">回复</button> </div> </div>";
+				$("#blog").append(txt1);
             },
             /**error 出现错误*/
             error: function () {
                 alert("there are some error");
             }
+        });
+        $.ajax({
+            url: "getDisicuss.do", /**请求的url*/
+            data:{},
+            type: "get",
+            dataType: "json", /**数据类型*/
+            beforeSend: function () {
+                /**登录之前  无法继续再按*/
+                //$("#loginBtn").enable(false);
+            },
+            /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+            success: function (result) {
+                var data=result.data;
+                $.each(data, function(i,val){
+                    var txt1=" <div class='Answer Card'><div class='MetaInfo'>"
+                        +" <span class='User'>"+val.accountId+"</span>"
+                        +"<span>回复</span> <span class='User'>"+account+"</span>"
+                        +" <button class='btn btn-info  pull-right'>+关注</button>"
+                        +"</div> <div class='TextContent'>"
+                        +"<span>"+val.content+"</span> </div>"
+                        +"  <div class='CardFooter'> <span></span> <div class='Reply' id='Reply' style='display:none;'>"
+                        +"  <form role='form'> <div class='form-group'>  <textarea class='form-control' rows='3'></textarea> </div> </form>"
+                        +"  <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none'\">取消</button> </div> <button class='btn btn-primary  pull-right' onclick=\"this.previousSibling.previousSibling.style.display='block'\">回复</button> </div> </div>";
+                    $("#answer").append(txt1);
+				});
+            },
+            /**error 出现错误*/
+            error: function () {
+                alert("there are some error");
+            }
+        });
+		$("#replayTest").click(function () {
+			var content=$("#returnContent").val();
+			if(content==""){
+			    alert("请输入回复的内容");
+			    return;
+			}else {
+                $.ajax({
+                    url: "addDiscuss.do", /**请求的url*/
+                    data:{content:content},
+                    type: "get",
+                    dataType: "json", /**数据类型*/
+                    beforeSend: function () {
+                        /**登录之前  无法继续再按*/
+                        //$("#loginBtn").enable(false);
+                    },
+                    /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                    success: function (result) {
+                      if(result.result==true){
+                          alert("回复成功");
+                          $("#returnContent").val("");
+                          $.ajax({
+                              url: "getDisicuss.do", /**请求的url*/
+                              data:{},
+                              type: "get",
+                              dataType: "json", /**数据类型*/
+                              beforeSend: function () {
+                                  /**登录之前  无法继续再按*/
+                                  //$("#loginBtn").enable(false);
+                              },
+                              /**后端返回的结果存于result  可以是任意对象类型 比如 map*/
+                              success: function (result) {
+                                  var data=result.data;
+                                  $("#answer").empty();
+                                  $.each(data, function(i,val){
+                                      var txt1=" <div class='Answer Card'><div class='MetaInfo'>"
+                                          +" <span class='User'>"+val.accountId+"</span>"
+                                          +"<span>回复</span> <span class='User'>"+account+"</span>"
+                                          +" <button class='btn btn-info  pull-right'>+关注</button>"
+                                          +"</div> <div class='TextContent'>"
+                                          +"<span>"+val.content+"</span> </div>"
+                                          +"  <div class='CardFooter'> <span></span> <div class='Reply' id='Reply' style='display:none;'>"
+                                          +"  <form role='form'> <div class='form-group'>  <textarea class='form-control' rows='3'></textarea> </div> </form>"
+                                          +"  <button class='btn btn-primary pull-right' onclick=\"this.parentNode.style.display='none'\">取消</button> </div> <button class='btn btn-primary  pull-right' onclick=\"this.previousSibling.previousSibling.style.display='block'\">回复</button> </div> </div>";
+                                      $("#answer").append(txt1);
+                                  });
+                              },
+                              /**error 出现错误*/
+                              error: function () {
+                                  alert("there are some error");
+                              }
+                          });
+                      }
+                      else {
+                          alert("回复失败");
+					  }
+                    },
+                    /**error 出现错误*/
+                    error: function () {
+                        alert("there are some error");
+                    }
+                });
+			}
         })
     });
 </script>

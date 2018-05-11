@@ -1,9 +1,11 @@
 package com.spring.bbs.web;
 
 import com.spring.bbs.dao.CommentDao;
+import com.spring.bbs.dao.DiscussDao;
 import com.spring.bbs.dto.ResultInfo;
 import com.spring.bbs.entity.Account;
 import com.spring.bbs.entity.Comment;
+import com.spring.bbs.entity.Discuss;
 import com.spring.bbs.service.RegisterService;
 import com.spring.bbs.service.impl.RegisterServiceImpl;
 import org.apache.commons.fileupload.FileItemIterator;
@@ -42,6 +44,8 @@ import java.util.List;
 public class indexController {
     @Autowired
     CommentDao commentDao;
+    @Autowired
+    DiscussDao discussDao;
     @RequestMapping(value = "/mainPage")
     @ResponseBody
     Object mainPage(HttpSession session){
@@ -77,6 +81,19 @@ public class indexController {
        resultInfo.setData(comments);
        return resultInfo;
     }
+    /*获得对应id的帖子的所有回复*/
+    @RequestMapping(value = "/getDisicuss")
+    @ResponseBody
+    Object getDisicuss(HttpSession session) {
+        Integer id= (Integer) session.getAttribute("id");
+        ResultInfo resultInfo=new ResultInfo();
+        List<Discuss>discusses=discussDao.selectById(id);
+        resultInfo.setData(discusses);
+        Comment comment=commentDao.selectById(id);
+        Account account= (Account) session.getAttribute("account");
+        resultInfo.setReason(account.getAccountName());
+        return resultInfo;
+    }
     @RequestMapping(value = "/getBlogById")
     @ResponseBody
     Object doContent(HttpSession session) throws ServletException, IOException {
@@ -84,6 +101,17 @@ public class indexController {
         Comment comment=commentDao.selectById(id);
         ResultInfo resultInfo=new ResultInfo();
         resultInfo.setData(comment);
+        return resultInfo;
+    }
+    @RequestMapping(value = "/addDiscuss")
+    @ResponseBody
+    Object addDiscuss(HttpSession session,@RequestParam("content")String content) throws ServletException, IOException {
+        Integer id= (Integer) session.getAttribute("id");
+        Account account= (Account) session.getAttribute("account");
+        ResultInfo resultInfo=new ResultInfo();
+        Discuss discuss=new Discuss(account.getAccountName(),id,content);
+        discussDao.insert(discuss);
+        resultInfo.setResult(true);
         return resultInfo;
     }
     @RequestMapping(value = "/getContent")
@@ -148,6 +176,6 @@ public class indexController {
             }
         Comment comment=new Comment(account.getAccountName(),picPath,text,title,type);
         commentDao.insert(comment);
-        request.getRequestDispatcher("main.html").forward(request,response);
+        request.getRequestDispatcher("mainPage.html").forward(request,response);
     }
 }

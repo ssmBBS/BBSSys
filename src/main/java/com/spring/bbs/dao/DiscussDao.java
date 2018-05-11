@@ -42,5 +42,7 @@ public interface DiscussDao {
      * @return
      */
     Integer selectCount(@Param("commentId") Integer commentId);
+    /*获得指定id的comments*/
+    List<Discuss>selectById(@Param("commentid")Integer commentid);
 
 }

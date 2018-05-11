@@ -4,13 +4,13 @@ import java.util.Date;
 
 /**
  * @Description 回复类
- * @Author 严旭江 Yan 873534617@qq.com
+ * @Author RickZhou
  * @date 2018/4/24-17:20
  * @Version 1.0
  */
 public class Discuss {
     /**用户的id*/
-    private Integer accountId;
+    private String accountId;
     /**说说的id*/
     private Integer commentId;
     /**回复的内容*/
@@ -21,23 +21,25 @@ public class Discuss {
     /**回复的时间*/
     private Date createTime;
 
-    public Discuss(){
-
-    }
-
-    public Discuss(Integer accountId, Integer commentId, String content) {
+    public Discuss(String accountId, Integer commentId, String content){
         this.accountId = accountId;
         this.commentId = commentId;
         this.content = content;
-        //this.serialNo = 1;//初始序列号为1
-        this.createTime = new Date();
+        this.createTime=new Date();
     }
 
-    public Integer getAccountId() {
+    public Discuss(String accountId, Integer commentId, String content, Date createTime) {
+        this.accountId = accountId;
+        this.commentId = commentId;
+        this.content = content;
+        this.createTime = createTime;
+    }
+
+    public String getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(Integer accountId) {
+    public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
 

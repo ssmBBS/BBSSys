@@ -82,13 +82,13 @@
         <div>
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a name= "signUpButton" href="#" onclick="toMain()">首页</a>
+                    <a name= "signUpButton" href="mainPage.html" onclick="toMain()">首页</a>
                 </li>
 
                 <li>
-                    <a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a>                </li>
+                   <!-- <a name= "signUpButton" href="#" onclick="toCenter()">个人中心</a> -->               </li>
                 <li>
-                    <a name= "signUpButton" href="#" onclick="toFriends()">好友</a>
+                   <!-- <a name= "signUpButton" href="#" onclick="toFriends()">好友</a>-->
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -206,7 +206,7 @@
                         +" </div><div class='TextContent'>"
                         +"<span>"+val.content+"</span>"
                         +"</div> <div class='CardFooter'>"
-                        +"<span>已经有"+val.likes+"点赞</span>"
+                        +"<span>"+val.likes+"</span>"
                         +"<div class='Reply' id='Reply' style='display:none;'>"
                         +"<form role='form'>"
                         +"<div class='form-group'>"
